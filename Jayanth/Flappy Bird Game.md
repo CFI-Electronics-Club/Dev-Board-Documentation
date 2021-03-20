@@ -16,5 +16,6 @@ SCL of OLED --> 22 of CDB
 Buzzer (longer leg) --> 23 of CDB     
 Buzzer (shorter leg) --> GND          
 Push Button  --> 4 of CDB              
-Push Button --> GND           
+Push Button --> GND          
+![](Flappy_Schem.png)
 
