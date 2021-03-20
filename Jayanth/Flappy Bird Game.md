@@ -13,7 +13,8 @@ VCC of OLED --> VCC of CDB
 GND of OLED --> GND of CDB      
 SDA of OLED --> 21 of CDB       
 SCL of OLED --> 22 of CDB      
-Buzzer (longer leg) --> 23 of CDB
-Buzzer (shorter leg) --> GND
-Push Button  --> 4 of CDB 
-Push Button --> GND
+Buzzer (longer leg) --> 23 of CDB     
+Buzzer (shorter leg) --> GND          
+Push Button  --> 4 of CDB              
+Push Button --> GND           
+
