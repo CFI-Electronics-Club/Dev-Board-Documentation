@@ -6,8 +6,8 @@ The concept is really simple. Various data inputs from the board (Hall effect va
 ## Prerequisites
 Arduino IDE 
 ## Components
--Electronics club custom development board 
--Jumper wires
+* Electronics club custom development board 
+* Jumper wires
 ## Schematic
 The following connections should be made:
 
