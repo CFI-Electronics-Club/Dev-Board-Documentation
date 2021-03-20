@@ -11,8 +11,8 @@ Arduino IDE
 ## Schematic
 The following connections should be made:
 
--SDA of custom board - Pin 21 of custom board
--SCL of custom board - Pin 22 of custom board
+* SDA of custom board - Pin 21 of custom board
+* SCL of custom board - Pin 22 of custom board
 ## Code
 **Note**:(Before reading the code, it is recommended to follow the reference link which is provided in the "References" section.)
 
