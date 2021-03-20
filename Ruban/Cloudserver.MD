@@ -14,80 +14,80 @@ The following connections should be made:
 SDA of custom board - Pin 21 of custom board
 SCL of custom board - Pin 22 of custom board
 ## Code
-    #ifdef __cplusplus
-extern "C" {
-#endif
-uint8_t temprature_sens_read();
-#ifdef __cplusplus
-}
-#endif
-uint8_t temprature_sens_read();
-#include <WiFi.h>
-String apiKey = "BE7U15RJYY57AV91";                  //  Enter your Write API key from ThingSpeak
-const char *ssid =  "Ashish";                                    // replace with your wifi ssid and wpa2 key
-const char *pass =  "12345678";
-const char* server = "api.thingspeak.com";
-WiFiClient client;
-void setup() 
-{
-    Serial.begin(115200);
-    delay(10);
-    Serial.println("Connecting to ");
-    Serial.println(ssid);
-    WiFi.begin(ssid, pass);
-    while (WiFi.status() != WL_CONNECTED) 
-    {
-        delay(500);
-        Serial.print(".");
-    }
-    Serial.println("");
-    Serial.println("WiFi connected");
- 
-}
-void loop() 
-{
-  
-int h = 0;
-float t =0;
+**Note**:(Before reading the code, it is recommended to follow the reference link which is provided in the "References" section.)
 
-h = hallRead();
-t = ((temprature_sens_read()-32)/1.8);                //changing temperature parameter to celsius
- if (client.connect(server,80))                                 //   "184.106.153.149" or api.thingspeak.com
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+    uint8_t temprature_sens_read();
+    #ifdef __cplusplus
+    }
+    #endif
+    uint8_t temprature_sens_read();
+    #include <WiFi.h>
+    String apiKey = "   ";                  //  Enter your Write API key from ThingSpeak
+    const char *ssid =  "   ";                                    // replace with your wifi ssid and wpa2 key
+    const char *pass =  "   ";
+    const char* server = "api.thingspeak.com";
+    WiFiClient client;
+    void setup() 
+    {
+     Serial.begin(115200);
+     delay(10);
+     Serial.println("Connecting to ");
+     Serial.println(ssid);
+     WiFi.begin(ssid, pass);
+     while (WiFi.status() != WL_CONNECTED) 
+     {
+         delay(500);
+         Serial.print(".");
+     }
+     Serial.println("");
+     Serial.println("WiFi connected");
+ 
+    }
+    void loop() 
+    {
+  
+    int h = 0;
+    float t =0;
+
+    h = hallRead();
+    t = ((temprature_sens_read()-32)/1.8);                //changing temperature parameter to celsius
+    if (client.connect(server,80))                                 //   "184.106.153.149" or api.thingspeak.com
     {  
                             
-    String postStr = apiKey;
-    postStr +="&field1=";
-    postStr += String(h);
-    postStr += "&field2=";
-    postStr += String(t);
-    postStr += "\r\n\r\n";
+     String postStr = apiKey;
+     postStr +="&field1=";
+     postStr += String(h);
+     postStr += "&field2=";
+     postStr += String(t);
+     postStr += "\r\n\r\n";
 
-    client.print("POST /update HTTP/1.1\n");
-    client.print("Host: api.thingspeak.com\n");
-    client.print("Connection: close\n");
-    client.print("X-THINGSPEAKAPIKEY: "+apiKey+"\n");
-    client.print("Content-Type: application/x-www-form-urlencoded\n");
-    client.print("Content-Length: ");
-    client.print(postStr.length());
-    client.print("\n\n");
-    client.print(postStr);
+     client.print("POST /update HTTP/1.1\n");
+     client.print("Host: api.thingspeak.com\n");
+     client.print("Connection: close\n");
+     client.print("X-THINGSPEAKAPIKEY: "+apiKey+"\n");
+     client.print("Content-Type: application/x-www-form-urlencoded\n");
+     client.print("Content-Length: ");
+     client.print(postStr.length());
+     client.print("\n\n");
+     client.print(postStr);
  
-    Serial.print("Hall: ");
-    Serial.println(h);
-    Serial.print("Temperature:");
-    Serial.print(t);
-    Serial.println(" C");
+     Serial.print("Hall: ");
+     Serial.println(h);
+     Serial.print("Temperature:");
+     Serial.print(t);
+     Serial.println(" C");
                              
-    Serial.println("%. Send to Thingspeak.");
-}
+     Serial.println("%. Send to Thingspeak.");
+    }
     client.stop();
     Serial.println("Waiting...");
     delay(10000);
-}
-## Anything Extra (Debugging) (Optional)
-...
+    }
 ## Follow up Problem Statement
-...
+As a follow up problem statement, try controlling certain outputs based on the data you obtain. For example, if the temperature graph you plot is having standard deviation below a certain threshold, you should switch on an LED. Else, no need of the LED. You can think of your own problem statements based on how to use the cloud server to your advantage.  
 ## References
-...
+[Data to cloud from ESP32](https://iotdesignpro.com/projects/how-to-send-data-to-thingspeak-cloud-using-esp32)
 
