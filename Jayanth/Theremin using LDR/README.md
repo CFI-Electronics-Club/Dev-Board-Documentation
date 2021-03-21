@@ -50,4 +50,5 @@ void buzz(int targetPin, long frequency, long length) {
     }
 }
 ```
-
+## Follow-up Problem Statement
+Can you use the capacitive touch pins and Aluminium foil to change the frequency of the buzzer as you slide your finger over the foil??
