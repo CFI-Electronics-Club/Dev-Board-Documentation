@@ -1,5 +1,4 @@
-https://randomnerdtutorials.com/esp-now-one-to-many-esp32-esp8266/
-# Controlling LEDs - ESP32 Webserver
+# ESP-NOW with ESP32
 ## Description
 ESP-NOW communication protocol to send data from one ESP32 to multiple ESP32 or ESP8266 boards (one-to-many configuration). The boards will be programmed using Arduino IDE.
 One ESP32 acts as a sender and multiple ESP32 or dev boards act as receivers. 
