@@ -97,7 +97,7 @@ delay(100);
 }
 ```
 ## Follow up Problem Statement
-Try to use internal clock of esp32, utilising the sleep feature to make it more challanging and power saving
+Try to use internal clock of esp32, utilising the sleep feature to make it more challenging and power saving
 ## References
 ### Arduino IDE setup for ESP32:
 https://circuitdigest.com/microcontroller-projects/getting-started-with-esp32-with-arduino-ide
