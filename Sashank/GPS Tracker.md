@@ -21,6 +21,7 @@ GPS stands for Global Positioning System, which is a worldwide radio-navigation 
 6. Blynk App
 ## Schematic
 ![circuit](https://iotdesignpro.com/sites/default/files/inline-images/Circuit-Diagram-For-ESP32-GPS-NEO-6M.jpg)
+
 Here we are interfacing the ESP32 with GPS Module and OLED Display. Vcc and GND pin of GPS Module is connected to 3.3V and GND of ESP32 while the RX and TX pins are connected to TX2 and RX2 pins of ESP32. I2C mode is used to connect the OLED display Module (SSD1306) with ESP32.
 ## Code
 ```
