@@ -13,8 +13,8 @@ The number will be entered from a Webpage and speech will be generated from ESP3
 * Jumpers
 
 ## Schematic
-![](LM386-Based-Audio-Amplifier-Circuit.png)
-![](Circuit-Diagram-for-TTS.png)
+![](Images/LM386-Based-Audio-Amplifier-Circuit.png)
+![](Images/Circuit-Diagram-for-TTS.png)
 
 ## Code
 ```
