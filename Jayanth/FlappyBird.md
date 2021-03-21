@@ -21,6 +21,7 @@ Push Button  --> 4 of CDB
 Push Button --> GND         
 ![](Images/FlappySchematic.png)
 ## Code
+##### flappy.ino:
 ```
 #include <Wire.h>  // Only needed for Arduino 1.6.5 and earlier
 #include "SSD1306Wire.h" // legacy include: `#include "SSD1306.h"`
