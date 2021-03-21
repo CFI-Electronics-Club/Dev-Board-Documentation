@@ -28,17 +28,6 @@ void loop(){
 After uploading the code, press the RST/EN button, and the MAC address should be displayed on the Serial Monitor.
 * The following code sends data to multiple (three) ESP boards via ESP-NOW. Modify the code with your receiver boards’ MAC address. Add or delete lines of code depending on the number of receiver boards.
 ```
-/*********
-  Rui Santos
-  Complete project details at https://RandomNerdTutorials.com/esp-now-one-to-many-esp32-esp8266/
-  
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files.
-  
-  The above copyright notice and this permission notice shall be included in all
-  copies or substantial portions of the Software.
-*********/
-
 #include <esp_now.h>
 #include <WiFi.h>
 
