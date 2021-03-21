@@ -4,11 +4,13 @@ Disturbed with the notifications from Phones,tired of taking a look at it and mi
 notifications you want to see specifically
 
 ## Prerequisites
-...
+ - Need to know and have android studio installed to compile the android code 
 ## Components
-...
+ - ESP32 board
+ - OLED
+ - Android phone
 ## Schematic
-...
+![](images/Insta_schematic.jpg)
 ## Code
 ```
 /**
