@@ -1,4 +1,4 @@
-# Powering ESP32 using solar panels
+## Powering ESP32 using solar panels
 ## Description
 ...
 ## Concept (Optional)
