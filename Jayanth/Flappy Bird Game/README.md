@@ -21,4 +21,4 @@ Push Button  --> 4 of CDB
 Push Button --> GND         
 ![](FlappySchematic.png)
 ## Code
-Download the following folder containing the [Code]() and other required files
+Download the following folder containing the [Code](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/tree/main/Jayanth/Flappy%20Bird%20Game/Flappy_Bird_Game) and other required files
