@@ -17,6 +17,6 @@ Buzzer (longer leg) --> 23 of CDB
 Buzzer (shorter leg) --> GND          
 Push Button  --> 4 of CDB              
 Push Button --> GND          
-![](Flappy_Schem.png)
+![](FlappySchematic.png)
 
 
