@@ -13,12 +13,12 @@ Arduino IDE
 ## Schematic
 The following connections should be made:
 
-* VCC of custom board - VDD of OLED - VCC of soil moisture sensor module
-* GND of custom board - GND of OLED - GND of soil moisture sensor module
-* VP of custom board - AO of soil moisture sensor module
-* SCL of custom board - SCK of OLED
-* SDA of custom board - SDA of OLED
-* +,- terminals of soil moisture sensor module - FC-28 probe's terminals
+* VCC of custom board <-> VDD of OLED <-> VCC of soil moisture sensor module
+* GND of custom board <-> GND of OLED <-> GND of soil moisture sensor module
+* VP of custom board <-> AO of soil moisture sensor module
+* SCL of custom board <-> SCK of OLED
+* SDA of custom board <-> SDA of OLED
+* +,- terminals of soil moisture sensor module <-> FC-28 probe's terminals
 
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/soilmos.jpg)
 ## Code
