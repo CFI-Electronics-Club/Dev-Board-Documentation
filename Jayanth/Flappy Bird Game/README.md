@@ -2,7 +2,8 @@
 ## Description
 The classic Flappy Bird Game on OLED using ESP32
 ## Prerequisites
-Arduino IDE 
+* Arduino IDE     
+* Download the following [OLED Library](https://github.com/ThingPulse/esp8266-oled-ssd1306) as a *.zip* file and add it to your Arduino IDE. Go through the documentation carefully
 ## Components
 * Electronics Club Custom Dev Board
 * OLED Display
