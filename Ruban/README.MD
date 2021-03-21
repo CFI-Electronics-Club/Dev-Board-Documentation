@@ -9,4 +9,4 @@ This folder contains some cool projects which you could try out on the **Electro
 3. Understand the schematic properly and always don't hesitate to **Google** if you find yourselves stuck with the schematic or the code or anything else. 
 4. Do the projects with full fun and enthu. It increases your productivity and creativity. 
 
-### Happy coding  
+### Happy coding ✌✌
