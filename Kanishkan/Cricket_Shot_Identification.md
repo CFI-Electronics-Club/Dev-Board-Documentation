@@ -6,7 +6,7 @@ Objective: Predict the cricketting shot that you played
 ## Concept:
 Concept behind this project is almost same as what we did in the last Session(HP wand using ML) 
 
-You can refer this: https://github.com/Fruitseye/ESP32_Mega_Session/tree/main/Day5_Machine_Learning_on_MCU 
+You can refer this: [Day5](https://github.com/Fruitseye/ESP32_Mega_Session/tree/main/Day5_Machine_Learning_on_MCU)
 
 Differences from the Harry potter wand in case of this project:
  - You need to attach your ESP32 firmly on a Cricket bat (Attach such a way that ball doesn't hit the esp32 board while playing)
@@ -30,4 +30,4 @@ Differences from the Harry potter wand in case of this project:
 
 ## Follow-up problem Statement:
  - This project in itself is a follow up of the ML session
- - Likewise,you can extend the [PLEASE.txt](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/files/6177130/PLEASE.txt)
+ - Likewise,you can extend do the same for other bat or racquet games
