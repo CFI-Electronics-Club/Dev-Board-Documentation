@@ -48,8 +48,12 @@ UniversalTelegramBot bot(BOTtoken, client);
 int botRequestDelay = 1000;
 unsigned long lastTimeBotRan;
 
-const int ledPin = 2;
-bool ledState = LOW;
+const int ledPinR = 12;
+const int ledPinG = 14;
+const int ledPinB = 27;
+bool ledStateR = LOW;
+bool ledStateG = LOW;
+bool ledStateB = LOW;
 
 // Handle what happens when you receive new messages
 void handleNewMessages(int numNewMessages) {
@@ -73,30 +77,78 @@ void handleNewMessages(int numNewMessages) {
     if (text == "/start") {
       String welcome = "Welcome, " + from_name + ".\n";
       welcome += "Use the following commands to control your outputs.\n\n";
-      welcome += "/led_on to turn GPIO ON \n";
-      welcome += "/led_off to turn GPIO OFF \n";
-      welcome += "/state to request current GPIO state \n";
+      welcome += "/redled_on to turn RED LED ON \n";
+      welcome += "/redled_off to turn RED LED OFF \n";
+      welcome += "/statered to request current RED LED state \n";
+      welcome += "/greenled_on to turn GREEN LED ON \n";
+      welcome += "/greenled_off to turn GREEN LED OFF \n";
+      welcome += "/stategreen to request current GREEN LED state \n";
+      welcome += "/blueled_on to turn BLUE LED ON \n";
+      welcome += "/blueled_off to turn BLUE LED OFF \n";
+      welcome += "/stateblue to request current BLUE LED state \n";
       bot.sendMessage(chat_id, welcome, "");
     }
 
-    if (text == "/led_on") {
-      bot.sendMessage(chat_id, "LED state set to ON", "");
-      ledState = HIGH;
-      digitalWrite(ledPin, ledState);
+    if (text == "/redled_on") {
+      bot.sendMessage(chat_id, "RED LED state set to ON", "");
+      ledStateR = HIGH;
+      digitalWrite(ledPinR, ledStateR);
     }
     
-    if (text == "/led_off") {
-      bot.sendMessage(chat_id, "LED state set to OFF", "");
-      ledState = LOW;
-      digitalWrite(ledPin, ledState);
+    if (text == "/redled_off") {
+      bot.sendMessage(chat_id, "RED LED state set to OFF", "");
+      ledStateR = LOW;
+      digitalWrite(ledPinR, ledStateR);
     }
     
-    if (text == "/state") {
-      if (digitalRead(ledPin)){
-        bot.sendMessage(chat_id, "LED is ON", "");
+    if (text == "/statered") {
+      if (digitalRead(ledPinR)){
+        bot.sendMessage(chat_id, "RED LED is ON", "");
       }
       else{
-        bot.sendMessage(chat_id, "LED is OFF", "");
+        bot.sendMessage(chat_id, " RED LED is OFF", "");
+      }
+    }
+    
+    if (text == "/greenled_on") {
+      bot.sendMessage(chat_id, "GREEN LED state set to ON", "");
+      ledStateG = HIGH;
+      digitalWrite(ledPinG, ledStateG);
+    }
+    
+    if (text == "/greenled_off") {
+      bot.sendMessage(chat_id, "GREEN LED state set to OFF", "");
+      ledStateG = LOW;
+      digitalWrite(ledPinG, ledStateG);
+    }
+    
+    if (text == "/stategreen") {
+      if (digitalRead(ledPinG)){
+        bot.sendMessage(chat_id, "GREEN LED is ON", "");
+      }
+      else{
+        bot.sendMessage(chat_id, " GREEN LED is OFF", "");
+      }
+    }
+    
+    if (text == "/blueled_on") {
+      bot.sendMessage(chat_id, "BLUE LED state set to ON", "");
+      ledStateB = HIGH;
+      digitalWrite(ledPinB, ledStateB);
+    }
+    
+    if (text == "/blueled_off") {
+      bot.sendMessage(chat_id, "BLUE LED state set to OFF", "");
+      ledStateB = LOW;
+      digitalWrite(ledPinB, ledStateB);
+    }
+    
+    if (text == "/stateblue") {
+      if (digitalRead(ledPinB)){
+        bot.sendMessage(chat_id, "BLUE LED is ON", "");
+      }
+      else{
+        bot.sendMessage(chat_id, " BLUE LED is OFF", "");
       }
     }
   }
@@ -104,8 +156,12 @@ void handleNewMessages(int numNewMessages) {
 
 void setup() {
   Serial.begin(115200);
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, ledState);
+  pinMode(ledPinR, OUTPUT);
+  pinMode(ledPinG, OUTPUT);
+  pinMode(ledPinB, OUTPUT);
+  digitalWrite(ledPinR, ledStateR);
+  digitalWrite(ledPinG, ledStateG);
+  digitalWrite(ledPinB, ledStateB);
   
   // Connect to Wi-Fi
   WiFi.mode(WIFI_STA);
