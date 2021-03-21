@@ -33,9 +33,9 @@ void setup() {
     pinMode(buzzerPin, OUTPUT); // set a pin for buzzer output
 }
 void loop() {
-    // read the values of the potentiometer
+    // read the values of the photoresistor
     photValue = analogRead(photopin); // Values 0-1023
-    // normalize the readings of a photoresistor to thatof the buzzer and photoresistor
+    // normalize the readings of a photoresistor to that of the buzzer and photoresistor
     buzzerFreq = (photValue * buzzMAX) / photoMAX;
     buzz(buzzerPin, buzzerFreq, 10);
 }
