@@ -19,4 +19,4 @@ LDR Leg 1 --> 10k Resistor --> 5 of CDB
 LDR Leg 1 --> VCC           
 LDR Leg 2 --> GND               
 ###### (Note: Leg 1 and Leg 2 are named arbitrarily)
-
+![](Theremin.png)
