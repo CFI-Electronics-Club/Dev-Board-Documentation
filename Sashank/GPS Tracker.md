@@ -1,4 +1,4 @@
-# Sample Project (Title)
+# ESP32 GPS vehicle tracker
 ## Description
 ESP32 based GPS mudule is used to track the location of vehicle and it can be monitored using the blynk app from anywhere in the world. Just that you need internet :p
 ## Concept (Optional)
@@ -92,7 +92,5 @@ void loop()
   Blynk.run();
 }
 ```
-## Follow up Problem Statement
-...
 ## References
 This Video should help: https://youtu.be/ga_6qcu5LmE
