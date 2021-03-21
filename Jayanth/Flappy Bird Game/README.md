@@ -22,3 +22,5 @@ Push Button --> GND
 ![](FlappySchematic.png)
 ## Code
 Download the following folder containing the [Code](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/tree/main/Jayanth/Flappy%20Bird%20Game/Flappy_Bird_Game) and other required files
+## References
+[ESP32 Flappy Bird Game](https://www.hackster.io/arduinob2016/esp32-flappy-bird-game-54391c)
