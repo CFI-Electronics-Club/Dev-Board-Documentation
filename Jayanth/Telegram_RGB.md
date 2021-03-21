@@ -6,4 +6,4 @@ This project demonstrates how to control outputs of GPIOs using Telegram. As an 
 * Arduino IDE
 * Download the [Universal Telegram Bot Library](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot/archive/master.zip) and add this into your Arduino IDE         
 ###### Note: Don’t install the library through the Arduino Library Manager because it might install a deprecated version             
-* Install the ArduinoJson library from the Library Manager in Arduino IDE
+* Install the **ArduinoJson** library from the Library Manager in Arduino IDE
