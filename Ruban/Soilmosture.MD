@@ -105,11 +105,7 @@ The following connections should be made:
            }
       }
     }
-
-Video
-## Anything Extra (Debugging) (Optional)
-...
-## Follow up Problem Statement
-...
+    
 ## References
-...
+[Site to buy the component](https://robu.in/product/soil-moisture-meter-soil-humidity-sensor-water-sensor-soil-hygrometer-ardunio/)
+[IOT based soil moisture monitoring system - Tutorial](https://iotdesignpro.com/projects/iot-based-soil-moisture-monitoring-system-using-esp32)
