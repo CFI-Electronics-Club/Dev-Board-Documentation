@@ -3,7 +3,8 @@
 Communicate with ESP32 over Internet using command line interface to save network credentials in the non-volatile memory and control LED
 
 ## Prerequisites
- - None
+ - Have an account in HUSARNET and install it on your laptop as well
+ - Interfacing it with ESP32
 ## Components
  - Custom ESP32 board
  - Jumper caps
@@ -241,9 +242,8 @@ void taskInternetCLI( void * parameter )
   }
 }
 ```
-## Anything Extra (Debugging) (Optional)
-...
+
 ## Follow up Problem Statement
-...
+- Try Controlling your friend's ESP32 from your computer
 ## References
-...
+Detailed Instructions: https://www.hackster.io/donowak/control-esp32-with-command-line-interface-over-the-internet-fa9634
