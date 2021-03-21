@@ -7,6 +7,7 @@ The main principle this works on is -
 Capacitance changes with increase/decrease in thickness of dielectric between the two electrodes.
 Create a gradient of insulator on top of the aluminium foil to get this change in the capacitance from one end of the strip to another.
 The choice of dielectric is clear plastic tape (cellotape), that is applied multiple layers. The tape is cut shorter by a few mm each time for the new layer applied on the aluminium foil. This will create a gradual increase in the thickness of the insulation over the strip. The change is still in terms of discreet steps, resolution of which should be decided based on the application and use case.
+
 ![image](https://user-images.githubusercontent.com/64363043/111902233-6e7c4c80-8a62-11eb-969b-ff612b217728.png)
 
 ## Prerequisites
