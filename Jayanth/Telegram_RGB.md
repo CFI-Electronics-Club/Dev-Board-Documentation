@@ -187,3 +187,7 @@ void loop() {
   }
 }
 ```
+## Follow-up Problem Statement
+Try to integrate any sensor(s) of your choice and get their readings through the Telegram Bot. Also think about any other features you can implement by just adding to/modifying the above given code
+## References
+[Telegrmam: Contol of ESP32/ESP8266 Outputs](https://randomnerdtutorials.com/telegram-control-esp32-esp8266-nodemcu-outputs/)
