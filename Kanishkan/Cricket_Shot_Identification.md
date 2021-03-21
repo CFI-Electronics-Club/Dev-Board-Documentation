@@ -13,7 +13,7 @@ Differences from the Harry potter wand in case of this project:
  - After you upload the code ,you need to remove it from the laptop and power it externally (Figure out how to do so)
  - You might have a question of how do you collect the data from the board if not connected in serial?
     - Setup a server and send data there(Like covered in Day2 and Day 3 of the sessions) or
-    - Send data over Bluetooth Serial
+    - Send data over **Bluetooth Serial**
 
 ***Note: Calibration is must***
 
