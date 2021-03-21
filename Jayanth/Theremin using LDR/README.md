@@ -20,3 +20,34 @@ LDR Leg 1 --> VCC
 LDR Leg 2 --> GND               
 ###### (Note: Leg 1 and Leg 2 are named arbitrarily)
 ![](Theremin.png)
+## Code
+```
+int photopin = 5; // Pin where the photo resistor is connected to
+int photValue; // The analog reading from the photoresistor
+int buzzerPin = 4; // Connect Buzzer to Pin 4
+long buzzerFreq; // The frequency to buzz the buzzer
+// You can experiment with these values:
+long buzzMAX = 2500; // Maximum frequency for the buzzer
+long photoMAX = 1023; // Maximum value for the photoresistor
+void setup() {
+    pinMode(buzzerPin, OUTPUT); // set a pin for buzzer output
+}
+void loop() {
+    // read the values of the potentiometer
+    photValue = analogRead(photopin); // Values 0-1023
+    // normalize the readings of a photoresistor to thatof the buzzer and photoresistor
+    buzzerFreq = (photValue * buzzMAX) / photoMAX;
+    buzz(buzzerPin, buzzerFreq, 10);
+}
+void buzz(int targetPin, long frequency, long length) {
+    long delayValue = 1000000/frequency/2;
+    long numCycles = frequency * length/ 1000;
+    for (long i=0; i < numCycles; i++){
+        digitalWrite(targetPin,HIGH);
+        delayMicroseconds(delayValue);
+        digitalWrite(targetPin,LOW);
+        delayMicroseconds(delayValue);
+    }
+}
+```
+
