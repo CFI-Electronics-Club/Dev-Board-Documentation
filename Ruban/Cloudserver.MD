@@ -87,7 +87,7 @@ The following connections should be made:
     delay(10000);
     }
 ## Follow up Problem Statement
-As a follow up problem statement, try controlling certain outputs based on the data you obtain. For example, if the temperature graph you plot is having standard deviation below a certain threshold, you should switch on an LED. Else, no need of the LED. You can think of your own problem statements and try using the cloud server to your advantage.  
+As a follow up problem statement, try controlling certain outputs based on the data you obtain. For example, if the temperature graph you plot is having standard deviation below a certain threshold, you should switch on an LED. Else, no need of the LED. You can think of your own problem statements and try using the cloud server to your advantage. Make the required changes to the code so that you can also obtain the IMU sensor values. Try using the Adafruit_MPU6050 library to obtain the filtered data (Taught in the IMU web server session).  
 ## References
 [Data to cloud from ESP32](https://iotdesignpro.com/projects/how-to-send-data-to-thingspeak-cloud-using-esp32)
 
