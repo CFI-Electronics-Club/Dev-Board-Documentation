@@ -13,4 +13,4 @@ This project demonstrates how to control outputs of GPIOs using Telegram. As an 
 R of CDB --> Any GPIO (12 in Code)                   
 G of CDB --> Any GPIO (14 in Code)              
 B of CDB --> Any GPIO (27 in Code)            
-
+![](Images/Telegram_RGB.png)
