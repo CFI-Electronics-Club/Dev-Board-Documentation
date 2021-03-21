@@ -19,7 +19,7 @@ Buzzer (longer leg) --> 23 of CDB
 Buzzer (shorter leg) --> GND          
 Push Button  --> 4 of CDB              
 Push Button --> GND         
-![](FlappySchematic.png)
+![](Images/FlappySchematic.png)
 ## Code
 Download the following folder containing the [Code](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/tree/main/Jayanth/Flappy%20Bird%20Game/Flappy_Bird_Game) and other required files
 ## References
