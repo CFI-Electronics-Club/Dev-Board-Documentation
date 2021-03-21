@@ -11,8 +11,8 @@ Arduino IDE
 ## Schematic
 The following connections should be made:
 
-* SDA of custom board - Pin 21 of custom board
-* SCL of custom board - Pin 22 of custom board
+* SDA of custom board <-> Pin 21 of custom board
+* SCL of custom board <-> Pin 22 of custom board
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/cloud.jpg)
 ## Code
 
