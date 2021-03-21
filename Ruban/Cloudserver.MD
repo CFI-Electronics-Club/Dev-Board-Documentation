@@ -15,7 +15,6 @@ The following connections should be made:
 * SCL of custom board - Pin 22 of custom board
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/cloud.jpg)
 ## Code
-**Note**: Before reading the code, it is recommended to follow the reference link which is provided in the "References" section.
 
     #ifdef __cplusplus
     extern "C" {
