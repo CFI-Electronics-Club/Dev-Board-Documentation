@@ -1,7 +1,7 @@
 # Internet Clock
 ## Description
 We will be making a clock displayed in oled using time extracted online accessing WIFI via the ESP32
-## Concept (Optional)
+## Concept
 ### NTP:
 Network Time Protocol (NTP) is a networking protocol used for synchronization of time between systems and Data networks.The NTP framework depends on Internet Time servers. NTP has algorithms to precisely adjust the time of day.NTP servers have software which send the clock's time of day to client computers using UDPport 123. So here in this project, we are getting time from NTP server using ESP32 and showing it on OLED display.
 
@@ -94,10 +94,20 @@ display.display();   // write the buffer to the display
 delay(10);
 delay(100);
 
-} ```
-## Anything Extra (Debugging) (Optional)
-...
+}
+```
 ## Follow up Problem Statement
-...
+Try to use internal clock of esp32, utilising the sleep feature to make it more challanging and power saving
 ## References
-...
+### Arduino IDE setup for ESP32:
+https://circuitdigest.com/microcontroller-projects/getting-started-with-esp32-with-arduino-ide
+### Libraries:
+1. Adafruit_SSD1306: https://github.com/adafruit/Adafruit_SSD1306
+
+2. SPI: https://github.com/PaulStoffregen/SPI
+
+3. Adafruit_GFX: https://github.com/adafruit/Adafruit-GFX-Library
+
+4. NTPClient:  https://github.com/arduino-libraries/NTPClient
+
+5. WiFiUdp: https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
