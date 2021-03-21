@@ -15,7 +15,7 @@ Understand WIFI usage in ESP32 with NTP,SPI protocols.They are pretty easy to le
 3. Breadboard
 4. Male-female wires
 ## Schematic
-![circuit](https://circuitdigest.com/sites/default/files/circuitdiagram_mic/Circuit-diagram-for-Internet-Clock-using-ESP32-and-OLED-Display.png)
+![circuit](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Sashank/Untitled%20Sketch.fzz_%20-%20Fritzing%20-%20%5BSchematic%20View%5D%2021-03-2021%205.04.33%20PM.png)
 ## Code
 ```#include <WiFi.h>
 
