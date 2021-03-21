@@ -19,7 +19,7 @@ ESP32 basic, understaning of capacitance
 ## Schematic
 The logic is to read the touch inputs repeatedly and check if the value has increased or decrease as compared to the previous reading. Each time such increase or decrease happens ideally your finger has moved from a point on the strip of one thickness to another point of different thickness.
 
-By having a count of such increase/decrease, we can get an analog value reading as well as direction of swipe. And this can be achieved from one GPIO pin of ESP32.
+By having a count of such increase/decrease, we can get an analog value reading as well as direction of swipe. And this can be achieved from one GPIO pin of ESP32 connected to aluminium foil and you moviing your finger across multiple layers of tape.
 ## Code
 ```
 #include <Arduino.h>
