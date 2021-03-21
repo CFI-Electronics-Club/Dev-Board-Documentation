@@ -148,8 +148,6 @@ void connectWiFi(void)
   delay(1000);
 }
 ```
-## Anything Extra (Debugging) (Optional)
-...
 ## Follow up Problem Statement
 - Try displaying twitter tweets on OLED display or the current song you are listening to in spotify
 ## References
