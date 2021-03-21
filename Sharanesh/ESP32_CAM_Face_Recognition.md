@@ -1,0 +1,2 @@
+# ESP32 Face Recognition Door lock
+Security is at most concern for anyone nowadays, whether it's data security or security of their own home. With the advancement of technology and the increasing use of IoT, digital door locks have become very common these days. Digital lock doesn’t require any physical key but it uses RFID, fingerprint, Face ID, pin, passwords, etc. to control the door lock.In this tutorial we build a Face ID controlled Digital Door lock system using ESP32 and an external Camera.
