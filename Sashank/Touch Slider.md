@@ -88,5 +88,6 @@ There may be problems wrt the making of the sensor and sensitivity of it, you ha
 ## Follow up Problem Statement
 Try to make the same more efficient, and utilise it for much better applications
 ## References
-https://hackaday.com/2015/11/30/conjuring-capacitive-touch-sensors-from-paper-and-aluminum-foil/ 
+https://www.allaboutcircuits.com/technical-articles/introduction-to-capacitive-touch-sensing/
+
 this helps understand how to make a touch sensor work, build up on the slider
