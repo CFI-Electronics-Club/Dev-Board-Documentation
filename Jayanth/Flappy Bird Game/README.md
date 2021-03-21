@@ -18,5 +18,5 @@ Buzzer (shorter leg) --> GND
 Push Button  --> 4 of CDB              
 Push Button --> GND          
 ![](FlappySchematic.png)
-
+## Code
 
