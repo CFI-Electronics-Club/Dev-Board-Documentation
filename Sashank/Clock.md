@@ -10,10 +10,10 @@ we use SPI mode to connect our 128×64 OLED display Module (SSD1306) to ESP32.
 ## Prerequisites
 Understand WIFI usage in ESP32 with NTP,SPI protocols.They are pretty easy to learn, and can be learnt while doing this project.
 ## Components
-ESP32
-128*64 OLED display
-Breadboard
-Male-female wires
+1. ESP32
+2. 128*64 OLED display
+3. Breadboard
+4. Male-female wires
 ## Schematic
 ![circuit](https://circuitdigest.com/sites/default/files/circuitdiagram_mic/Circuit-diagram-for-Internet-Clock-using-ESP32-and-OLED-Display.png)
 ## Code
