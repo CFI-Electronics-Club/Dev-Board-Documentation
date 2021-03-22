@@ -1,6 +1,6 @@
 # Images on Web server
 ## Description
-In this project, we will be displaying images on a webserver using an ESP32. The images will be stored in the custom board's filesystem and can also be transmitted to other devices through wireless communication.
+In this project, we will be displaying images on a webserver using the custom board. The images will be stored in the custom board's filesystem and can also be transmitted to other devices through wireless communication.
 ## Concept 
 The concept is very simple. We store the images in the custom board's memory and display it on a webserver using wireless communication. This project will introduce you to the libraries that deal with wireless communication, asynchronous web server and ESP32 filesystem.
 ## Prerequisites
