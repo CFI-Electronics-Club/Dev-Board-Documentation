@@ -11,7 +11,14 @@ The concept is very simple. We store the images in the custom board's memory and
 * OLED display (For the follow up PS)
 * Jumper wires (For the follow up PS)
 ## Schematic
-As for the main problem statement, there is no external connections required. Just connecting the custom board to the laptop and uploading the code will do the job. However, for the follow up PS, the custom board must be interfaced with the OLED display. The schematic is given below:
+As for the main problem statement, there is no external connections required. Just connecting the custom board to the laptop and uploading the code will do the job. However, for the follow up PS, the custom board must be interfaced with the OLED display. The connections which should be made are:
+
+* VCC of custom board <-> VDD of OLED
+* GND of custom board <-> GND of OLED
+* SCL of custom board <-> SCK of OLED
+* SDA of custom board <-> SDA of OLED
+
+The schematic is given below:
 
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/imagewebserver.jpg)
 ## Code
