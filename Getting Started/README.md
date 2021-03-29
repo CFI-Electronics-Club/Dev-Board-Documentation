@@ -17,7 +17,7 @@ Communication between two devices within the circuit: Pins of Microcontroller ar
 * Two Wires - SDA (Serial Data Line) and SCL (Serial Clock Line)          
 * Master to Slave Communication Protocol         
 * Each Slave has a unique address, using which the Master selects a device to communicate with             
-[Read Further](https://www.elprocus.com/communication-protocols/)     
+[Further Reading](https://www.elprocus.com/communication-protocols/)     
 ## Electronics Club Custom Development Board
 Our Custom Dev Board is developed around the **ESP32 WROOM SoC** (System-on-Chip) and comes with **WiFi** and **Bluetooth** functionalities. The Board comes with a built-in **IMU** (Inertial Measurement Unit) Sensor and an RGB LED.                        
 
@@ -29,3 +29,8 @@ Our Custom Dev Board is developed around the **ESP32 WROOM SoC** (System-on-Chip
 ###### Note: Power Supply is +5V 
 ### Custom Dev Board vs Arduino UNO:
 ![](Images/CDBvsUNO.png)
+##### IMU (Inertial Measurement Unit): 
+* An electronic device used to calculate the orientation, angular velocity, etc. of an object, when attached to it        
+* Blend of Accelerometer, Gyroscope (6-Axis IMU) and additionally a Magnetometer (9-Axis IMU)          
+* Data from an IMU sensor can be manipulated to obtain direction, acceleration, etc.                
+* Used in UAVs, IMU based GPS devices and also in Robotic applications
