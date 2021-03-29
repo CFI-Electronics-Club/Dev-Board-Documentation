@@ -9,6 +9,7 @@ DS3231 is a RTC (Real Time Clock) module. It is used to maintain the date and ti
 ## What is OLED Display module?
 At the heart of the module is a powerful single-chip CMOS OLED driver controller – SSD1306. It can communicate with the microcontroller in multiple ways including I2C and SPI. SPI is generally faster than I2C but requires more I/O pins. While I2C requires only two pins and can be shared with other I2C peripherals. It’s a trade-off between pins and speed. So, it really boils down to your choice. There are lot of Libraries available for interfacing it with different Microcontrollers, using which we can make the interfacing a lot simpler. These libraries are easy to use and have lot of readily available graphical options. Also there are many online tools available for converting an image into a bit map values to be fed into microcontrollers.
 
+The description of the individual pins of the OLED Module is shown below:
 ![pin_description](https://user-images.githubusercontent.com/64090461/112865301-44680180-90d6-11eb-945a-f8c569fc1bd7.png)
 
 ## Materials Required
