@@ -17,7 +17,7 @@ Communication between two devices within the circuit: Pins of Microcontroller ar
 * Two Wires - SDA (Serial Data Line) and SCL (Serial Clock Line)          
 * Master to Slave Communication Protocol         
 * Each Slave has a unique address, using which the Master selects a device to communicate with             
-[Reference](https://www.elprocus.com/communication-protocols/)     
+[Read Further](https://www.elprocus.com/communication-protocols/)     
 ## Electronics Club Custom Development Board
 Our Custom Dev Board is developed around the **ESP32 WROOM SoC** (System-on-Chip) and comes with **WiFi** and **Bluetooth** functionalities. The Board comes with a built-in **IMU** (Inertial Measurement Unit) Sensor and an RGB LED.                        
 
