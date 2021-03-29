@@ -1,3 +1,7 @@
+#### Analog and Digital Signals: 
+* Analog signal is a continuous signal that can take a range of values - represents physical measurements     
+* Digital signals only take discrete values to represent information
+
 ### Communication Protocols 
 Proper descriptions of Digital message formats and rules that allow two electronic devices to connect and exchange data with each other            
 ##### Inter-System Protocol: 
