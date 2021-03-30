@@ -22,5 +22,4 @@ We certainly cannot change the physical dimensions of the capacitor just by touc
 
 * Finger as conductor:
 
-We know that the human skin is also conductive. We can assume that this new capacitor created by the finger (let’s call it the finger cap) is in parallel with the existing PCB capacitor. This situation is a bit complex because the person using the touch-sensitive device is not electrically connected to the PCB’s ground node. 
-
+We know that the human skin is also conductive. We can assume that this new capacitor created by the finger (let’s call it the finger cap) is in parallel with the existing PCB capacitor. This situation is a bit complex because the person using the touch-sensitive device is not electrically connected to the PCB’s ground node. We can think of the human body as providing a virtual ground because it has a relatively large capacity to absorb electric charge.
