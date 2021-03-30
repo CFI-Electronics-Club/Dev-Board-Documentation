@@ -11,8 +11,7 @@ The WiFi modules, the Processing Cores, and the Bluetooth module require a lot o
 Arduino IDE
 ## Components
 * Electronics Club Custom Development Board (CDB)          
-* Light-Dependent Resistor (LDR)             
-* Buzzer
+* LED
 * Resistor - 10k
 * Jumpers
 * Breadboard   
