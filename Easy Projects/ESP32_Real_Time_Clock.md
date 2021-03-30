@@ -20,8 +20,7 @@ The description of the individual pins of the OLED Module is shown below:
 - Breadboard
 
 ## Circuit Diagram
-
-![Circuit_diagram](https://circuitdigest.com/sites/default/files/circuitdiagram_mic/DS3231-Module-based-ESP32-Real-Time-Clock-circuit-diagram.png)
+![Circuit_diagram](https://user-images.githubusercontent.com/64090461/112970973-601de700-916c-11eb-90df-db84fcf11fa1.png)
 
 RTC DS3231 IC uses I2C mode of communication. It has SCL, SDA, Vcc and GND pins coming out of it. The Connection of RTC module with ESP32 is given below:
 
@@ -32,13 +31,10 @@ RTC DS3231 IC uses I2C mode of communication. It has SCL, SDA, Vcc and GND pins 
 
 Here, we are using SPI mode to connect our 128×64 OLED display Module (SSD1306) to ESP32. So, it will use 7 pins. Connections with ESP32 are given as:
 
-1. CS(Chip select) pin of OLED -> PIN D5 of ESP32
-2. DC pin of OLED -> PIN D4 of ESP32
-3. RES pin of OLED -> PIN D2 of ESP32
-4. SDA pin of OLED -> PIN D23 i.e. MOSI of ESP32
-5. SCK pin of OLED -> PIN D18 i.e. SCK of ESP32
-6. Vdd of OLED -> Vcc of ESP32
-7. GND of OLED -> GND of ESP32
+1. SDA pin of OLED -> PIN 21 of ESP32
+2. SCK pin of OLED -> PIN 22 of ESP32
+3. Vdd of OLED -> Vcc of ESP32
+4. GND of OLED -> GND of ESP32
 
 ## Libraries Used
 1. Adafruit_SSD1306 : https://github.com/adafruit/Adafruit_SSD1306
