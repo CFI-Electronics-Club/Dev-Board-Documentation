@@ -15,6 +15,7 @@ Arduino IDE
 * Resistor - 10k
 * Jumpers
 * Breadboard   
+* Multimeter
 ## Schematic
 Buzzer Pin 1 --> 4 of CDB             
 Buzzer Pin 2 --> GND                    
