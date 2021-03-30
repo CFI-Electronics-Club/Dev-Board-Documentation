@@ -24,33 +24,41 @@ LDR Leg 2 --> GND
 ###### (Note: Leg 1 and Leg 2 are named arbitrarily)
 ![](Images/Theremin.png)
 ## Code
-```
-int photopin = 5; // Pin where the photo resistor is connected to
-int photValue; // The analog reading from the photoresistor
-int buzzerPin = 4; // Connect Buzzer to Pin 4
-long buzzerFreq; // The frequency to buzz the buzzer
-// You can experiment with these values:
-long buzzMAX = 2500; // Maximum frequency for the buzzer
-long photoMAX = 1023; // Maximum value for the photoresistor
-void setup() {
-    pinMode(buzzerPin, OUTPUT); // set a pin for buzzer output
+```c
+#define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  3        /* Time ESP32 will go to sleep (in seconds) */
+
+RTC_DATA_ATTR int bootCount = 0;
+
+int GREEN_LED_PIN = 25;
+int YELLOW_LED_PIN = 26;
+
+void setup(){
+
+  pinMode(GREEN_LED_PIN,OUTPUT);
+  pinMode(YELLOW_LED_PIN,OUTPUT);
+  delay(500);
+  
+  if(bootCount == 0) //Run this only the first time
+  {
+      digitalWrite(YELLOW_LED_PIN,HIGH);
+      bootCount = bootCount+1;
+  }else
+  {
+      digitalWrite(GREEN_LED_PIN,HIGH);
+  }
+  
+  delay(3000);
+
+  digitalWrite(GREEN_LED_PIN,LOW);
+  digitalWrite(YELLOW_LED_PIN,LOW);
+
+  esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
+  esp_deep_sleep_start();
 }
-void loop() {
-    // read the values of the photoresistor
-    photValue = analogRead(photopin); // Values 0-1023
-    // normalize the readings of a photoresistor to that of the buzzer and photoresistor
-    buzzerFreq = (photValue * buzzMAX) / photoMAX;
-    buzz(buzzerPin, buzzerFreq, 10);
-}
-void buzz(int targetPin, long frequency, long length) {
-    long delayValue = 1000000/frequency/2;
-    long numCycles = frequency * length/ 1000;
-    for (long i=0; i < numCycles; i++){
-        digitalWrite(targetPin,HIGH);
-        delayMicroseconds(delayValue);
-        digitalWrite(targetPin,LOW);
-        delayMicroseconds(delayValue);
-    }
+
+void loop(){
+  
 }
 ```
 ## Follow-up Problem Statement
