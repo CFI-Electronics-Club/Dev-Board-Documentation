@@ -16,10 +16,11 @@ The finger is insulated from the capacitor by the PCB’s solder mask and usuall
 
 ![](https://www.allaboutcircuits.com/uploads/articles/ICTS_diagram2.JPG)
 
-* Finger as Dielectric:
+* Finger as dielectric:
 
 We certainly cannot change the physical dimensions of the capacitor just by touching it, but we can change the dielectric constant, because a human finger has different dielectric characteristics than the material (presumably air) that it is displacing. Since the human flesh is a good dielectric, the finger’s interaction with the capacitor’s electric field represents an increase in the dielectric constant and hence an increase in the capacitance.
 
-* Finger as Conductor:
+* Finger as conductor:
 
+We know that the human skin is also conductive. We can assume that this new capacitor created by the finger (let’s call it the finger cap) is in parallel with the existing PCB capacitor. This situation is a bit complex because the person using the touch-sensitive device is not electrically connected to the PCB’s ground node. 
 
