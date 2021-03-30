@@ -23,3 +23,19 @@ We certainly cannot change the physical dimensions of the capacitor just by touc
 * Finger as conductor:
 
 We know that the human skin is also conductive. We can assume that this new capacitor created by the finger (let’s call it the finger cap) is in parallel with the existing PCB capacitor. This situation is a bit complex because the person using the touch-sensitive device is not electrically connected to the PCB’s ground node. We can think of the human body as providing a virtual ground because it has a relatively large capacity to absorb electric charge.
+
+## Code
+Reading the touch sensor is straightforward. In the Arduino IDE, you use the touchRead() function, that accepts as argument, the GPIO you want to read.
+
+'''
+void setup() {
+  Serial.begin(115200);
+  delay(1000); // give me time to bring up serial monitor
+  Serial.println("ESP32 Touch Test");
+}
+
+void loop() {
+  Serial.println(touchRead(4));  // get value of Touch 0 pin = GPIO 4
+  delay(1000);
+}
+'''
