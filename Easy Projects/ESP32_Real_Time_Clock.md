@@ -20,7 +20,7 @@ The description of the individual pins of the OLED Module is shown below:
 - Breadboard
 
 ## Circuit Diagram
-![Circuit_diagram](https://raw.githubusercontent.com/CFI-Electronics-Club/Dev-Board-Documentation/main/Easy%20Projects/Images/RTC.png?token=API7CXL5ELRH7PWPLH6DXGTAML3TA)
+![Schematic](https://raw.githubusercontent.com/CFI-Electronics-Club/Dev-Board-Documentation/main/Easy%20Projects/Images/RTC.png?token=API7CXL5ELRH7PWPLH6DXGTAML3TA)
 
 RTC DS3231 IC uses I2C mode of communication. It has SCL, SDA, Vcc and GND pins coming out of it. The Connection of RTC module with ESP32 is given below:
 
