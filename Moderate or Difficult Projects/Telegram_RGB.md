@@ -1,6 +1,8 @@
 # Controlling GPIOs using Telegram
 ## Description
 This project demonstrates how to control outputs of GPIOs using Telegram. As an example, we will control the internal RGB LED in the Custom Development Board using Telegram messages
+##### Difficulty Level
+Moderate
 ## Prerequisites
 * Telegram App on your Device           
 * Arduino IDE
