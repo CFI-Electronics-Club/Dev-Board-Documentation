@@ -17,7 +17,7 @@ MAX30100 sensor is integrated pulse oximetry and heart rate monitor module. It c
 6. USB cable Micro USB to USBA
 
 ## Circuit Diagram
-![circuit](https://circuitdigest.com/sites/default/files/circuitdiagram_mic/Interfacing-MAX30100-Oximeter-with-ESP32.png)
+![Schematic](Imgaes/Pulse_oximeter.png)
 
 ## Adafruit IO with ESP32
 1. First sign up in the adafruit IO after giving the Fist name, last name, email address, user name, and the password.
