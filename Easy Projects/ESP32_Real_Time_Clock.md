@@ -43,15 +43,18 @@ Here, we are using SPI mode to connect our 128×64 OLED display Module (SSD1306)
 
 ## Code
 ```
+// Imprting the Required Libraries
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include "RTClib.h"
- 
+
+// Instanciating a RTC Module
 RTC_DS3231 rtc;
 char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
- 
+
+// Setting up the OLED Screen
 #define SCREEN_WIDTH 128  // OLED display width, in pixels
 #define SCREEN_HEIGHT 64  // OLED display height, in pixels
 #define OLED_RESET    -1  // Reset pin # (or -1 if sharing reset pin)
