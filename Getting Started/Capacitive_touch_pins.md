@@ -3,3 +3,7 @@ The ESP32 has 10 capacitive touch GPIOs. These GPIOs can sense variations in any
 
 
 The GPIO pins which act as touch pins are pins numbered 0, 2, 4, 12, 13, 14, 15, 27, 32, 33.
+
+## Working of a capacitive touch sensor
+We’re all accustomed to seeing capacitance in the form of leaded components or surface-mount packages, but actually, all we really need is two conductors separated by an insulating material. 
+![](https://www.allaboutcircuits.com/uploads/articles/ICTS_diagram1.JPG)
