@@ -20,7 +20,7 @@ The description of the individual pins of the OLED Module is shown below:
 - Breadboard
 
 ## Circuit Diagram
-![Circuit_diagram](https://user-images.githubusercontent.com/64090461/112970973-601de700-916c-11eb-90df-db84fcf11fa1.png)
+![Circuit_diagram](https://raw.githubusercontent.com/CFI-Electronics-Club/Dev-Board-Documentation/main/Easy%20Projects/Images/RTC.png?token=API7CXL5ELRH7PWPLH6DXGTAML3TA)
 
 RTC DS3231 IC uses I2C mode of communication. It has SCL, SDA, Vcc and GND pins coming out of it. The Connection of RTC module with ESP32 is given below:
 
@@ -38,53 +38,49 @@ Here, we are using SPI mode to connect our 128×64 OLED display Module (SSD1306)
 
 ## Libraries Used
 1. Adafruit_SSD1306 : https://github.com/adafruit/Adafruit_SSD1306
-
-2. SPI : https://github.com/PaulStoffregen/SPI
-
-3. Adafruit_GFX : https://github.com/adafruit/Adafruit-GFX-Library
-
-4. RTClib : https://github.com/adafruit/RTClib
+2. Adafruit_GFX : https://github.com/adafruit/Adafruit-GFX-Library
+3. RTClib : https://github.com/adafruit/RTClib
 
 ## Code
 ```
-//////////////
-// Including the header files
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include "RTClib.h"
-//////////////
-
-//////////////
-// Defining the clock module and pins of the OLED
+ 
 RTC_DS3231 rtc;
 char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-#define OLED_MOSI  23
-#define OLED_CLK   18
-#define OLED_DC    4
-#define OLED_CS    5
-#define OLED_RESET 2
-Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
-//////////////
-
-//////////////
-// The setup function which runs only once a time.
+ 
+#define SCREEN_WIDTH 128  // OLED display width, in pixels
+#define SCREEN_HEIGHT 64  // OLED display height, in pixels
+#define OLED_RESET    -1  // Reset pin # (or -1 if sharing reset pin)
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+ 
+ 
 void setup() 
 {
-
+ 
 Serial.begin(9600);
-
+ 
 if (! rtc.begin()) {
 Serial.println("Couldn't find RTC");
 while (1);
 }
-
-// We call a function rtc.adjust(DateTime(__DATE__, __TIME__)) which will set the time according to our PC time.
+ 
+if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
+{ 
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // Don't proceed, loop forever
+}
+ 
 rtc.adjust(DateTime(__DATE__, __TIME__));
-
-// We call display functions to show on OLED.
-display.begin(SSD1306_SWITCHCAPVCC);
+ 
+ display.display();
+ delay(2);
+ display.clearDisplay();
+ 
+ 
 display.clearDisplay();
 display.setTextColor(WHITE);
 //display.startscrollright(0x00, 0x0F);
@@ -94,62 +90,56 @@ display.print("  Clock ");
 display.display();
 delay(3000);
 }
-//////////////
-
-//////////////
-// The looping code, which runs indefinitely
+ 
 void loop()
 {
-DateTime now = rtc.now(); //Storing the current date and time
-
-// Setting up the display and printing the seconds
-display.clearDisplay(); 
+DateTime now = rtc.now();
+ 
+display.clearDisplay();
 display.setTextSize(2);
 display.setCursor(75,0);
 display.println(now.second(), DEC);
-
+ 
 display.setTextSize(2);
 display.setCursor(25,0);
 display.println(":");
-
+ 
 display.setTextSize(2);
 display.setCursor(65,0);
 display.println(":");
-
-// Setting up the display and printing the minutes
+ 
 display.setTextSize(2);
 display.setCursor(40,0);
 display.println(now.minute(), DEC);
-
-// Setting up the display and printing the hours
+ 
 display.setTextSize(2);
 display.setCursor(0,0);
 display.println(now.hour(), DEC);
-
-// Setting up the display and printing the day
-display.setTextSize(1);
-display.setCursor(0,15);
+ 
+display.setTextSize(2);
+display.setCursor(0,20);
 display.println(now.day(), DEC);
-display.print(daysOfTheWeek[now.dayOfTheWeek()]);
-
-display.setTextSize(1);
-display.setCursor(25,15);
+ 
+display.setTextSize(2);
+display.setCursor(25,20);
 display.println("-");
-
-// Setting up the display and printing the month
-display.setTextSize(1);
-display.setCursor(40,15);
+ 
+display.setTextSize(2);
+display.setCursor(40,20);
 display.println(now.month(), DEC);
-
-display.setTextSize(1);
-display.setCursor(55,15);
+ 
+display.setTextSize(2);
+display.setCursor(55,20);
 display.println("-");
-
-// Setting up the display and printing the year
-display.setTextSize(1);
-display.setCursor(70,15);
+ 
+display.setTextSize(2);
+display.setCursor(70,20);
 display.println(now.year(), DEC);
-
+ 
+display.setTextSize(2);
+display.setCursor(0,40);
+display.print(daysOfTheWeek[now.dayOfTheWeek()]);
+ 
 display.display(); 
 }
 ```
