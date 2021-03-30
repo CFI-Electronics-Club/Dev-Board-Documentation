@@ -12,3 +12,8 @@ We’re all accustomed to seeing capacitance in the form of leaded components or
 The insulating separation between the touch-sensitive button and the surrounding copper creates a capacitor. In this case, the surrounding copper is connected to the ground node, and consequently, our touch-sensitive button can be modeled as a capacitor between the touch-sensitive signal and ground.
 
 ## The effect of a finger 
+The finger is insulated from the capacitor by the PCB’s solder mask and usually also by a layer of plastic that separates the device’s electronics from the external environment. So the finger is not discharging the capacitor, and furthermore, the amount of charge stored in the capacitor at a particular moment is not the quantity of interest, rather, the quantity of interest is the capacitance at a particular moment.
+
+![](https://www.allaboutcircuits.com/uploads/articles/ICTS_diagram2.JPG)
+
+* Finger as Dielectric
