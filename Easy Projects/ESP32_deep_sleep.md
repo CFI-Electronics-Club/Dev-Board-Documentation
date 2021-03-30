@@ -57,4 +57,4 @@ void buzz(int targetPin, long frequency, long length) {
 ## Follow-up Problem Statement
 Can you use the capacitive touch pins and Aluminium foil to change the frequency of the buzzer as you slide your finger over the foil??
 ## References
-[Simple Theremin with ESP32](https://www.instructables.com/Make-a-Pocket-Size-Theremin-With-ESP32/)
+[ESP32 deep sleep tutorial](https://www.instructables.com/ESP32-Deep-Sleep-Tutorial/)
