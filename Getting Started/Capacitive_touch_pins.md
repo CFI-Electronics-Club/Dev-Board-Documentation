@@ -30,12 +30,12 @@ Reading the touch sensor is straightforward. In the Arduino IDE, you use the tou
 ```c
 void setup() {
   Serial.begin(115200);
-  delay(1000); // give me time to bring up serial monitor
+  delay(1000); // gives time to bring up serial monitor
   Serial.println("ESP32 Touch Test");
 }
 
 void loop() {
-  Serial.println(touchRead(4));  // get value of Touch 0 pin = GPIO 4
+  Serial.println(touchRead(4));  // gets value of Touch 0 pin = GPIO 4
   delay(1000);
 }
 ```
