@@ -92,7 +92,7 @@ float h = dht.readHumidity();
   display.display(); 
 }
 ```
-### Full Code
+## Full Code
 ```
 #include <Wire.h>
 #include <Adafruit_GFX.h>
