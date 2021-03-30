@@ -27,7 +27,7 @@ We know that the human skin is also conductive. We can assume that this new capa
 ## Code
 Reading the touch sensor is straightforward. In the Arduino IDE, you use the touchRead() function, that accepts as argument, the GPIO you want to read.
 
-'''
+'''cpp
 void setup() {
   Serial.begin(115200);
   delay(1000); // give me time to bring up serial monitor
