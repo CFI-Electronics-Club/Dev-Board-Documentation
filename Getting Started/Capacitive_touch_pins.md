@@ -6,4 +6,9 @@ The GPIO pins which act as touch pins are pins numbered 0, 2, 4, 12, 13, 14, 15,
 
 ## Working of a capacitive touch sensor
 We’re all accustomed to seeing capacitance in the form of leaded components or surface-mount packages, but actually, all we really need is two conductors separated by an insulating material. 
+
 ![](https://www.allaboutcircuits.com/uploads/articles/ICTS_diagram1.JPG)
+
+The insulating separation between the touch-sensitive button and the surrounding copper creates a capacitor. In this case, the surrounding copper is connected to the ground node, and consequently, our touch-sensitive button can be modeled as a capacitor between the touch-sensitive signal and ground.
+
+## The effect of a finger 
