@@ -2,10 +2,8 @@
 ## Description
 In this simple mini project, we are going to pull down data from the board and store it in a cloud server.
 ## Concept
-The concept is really simple. Various data inputs from the board (Hall effect value, temperature, acceleration and angular velocities) are obtained and stored in a cloud storage and the data is plotted. 
-## Prerequisites
-Arduino IDE 
-## Components
+The concept is really simple. The temperature and hall effect sensor values are obtained and stored in a cloud storage and the data is plotted. 
+## Components required
 * Electronics club custom development board 
 * Jumper wires
 ## Schematic
