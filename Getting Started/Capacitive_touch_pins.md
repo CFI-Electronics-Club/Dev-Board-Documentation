@@ -16,4 +16,4 @@ The finger is insulated from the capacitor by the PCB’s solder mask and usuall
 
 ![](https://www.allaboutcircuits.com/uploads/articles/ICTS_diagram2.JPG)
 
-** Finger as Dielectric
+* **Finger as Dielectric**
