@@ -65,18 +65,21 @@ void setup()
 {
  
 Serial.begin(9600);
- 
+
+// Searching for the RTC module
 if (! rtc.begin()) {
 Serial.println("Couldn't find RTC");
 while (1);
 }
- 
+
+// Establishing connection with OLED
 if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
 { 
     Serial.println(F("SSD1306 allocation failed"));
     for(;;); // Don't proceed, loop forever
 }
- 
+
+// Finding the Date and time
 rtc.adjust(DateTime(__DATE__, __TIME__));
  
  display.display();
@@ -96,12 +99,13 @@ delay(3000);
  
 void loop()
 {
-DateTime now = rtc.now();
- 
+DateTime now = rtc.now(); // Getting the instantaneous time
+
+// Displaying the seconds
 display.clearDisplay();
 display.setTextSize(2);
 display.setCursor(75,0);
-display.println(now.second(), DEC);
+display.println(now.second(), DEC); 
  
 display.setTextSize(2);
 display.setCursor(25,0);
@@ -110,15 +114,18 @@ display.println(":");
 display.setTextSize(2);
 display.setCursor(65,0);
 display.println(":");
- 
+
+// Displaying the minutes
 display.setTextSize(2);
 display.setCursor(40,0);
 display.println(now.minute(), DEC);
- 
+
+// Displaying the hour
 display.setTextSize(2);
 display.setCursor(0,0);
 display.println(now.hour(), DEC);
- 
+
+// Displaying the day
 display.setTextSize(2);
 display.setCursor(0,20);
 display.println(now.day(), DEC);
@@ -126,7 +133,8 @@ display.println(now.day(), DEC);
 display.setTextSize(2);
 display.setCursor(25,20);
 display.println("-");
- 
+
+// Displaying the month
 display.setTextSize(2);
 display.setCursor(40,20);
 display.println(now.month(), DEC);
@@ -134,11 +142,13 @@ display.println(now.month(), DEC);
 display.setTextSize(2);
 display.setCursor(55,20);
 display.println("-");
- 
+
+// Displaying the year
 display.setTextSize(2);
 display.setCursor(70,20);
 display.println(now.year(), DEC);
- 
+
+// Displaying the day of the week
 display.setTextSize(2);
 display.setCursor(0,40);
 display.print(daysOfTheWeek[now.dayOfTheWeek()]);
