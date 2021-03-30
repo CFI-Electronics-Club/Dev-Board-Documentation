@@ -221,4 +221,4 @@ void loop() {
 ```
 
 ## Refernces
-You can find more details of the project and the description of the components [here](
+You can find more details of the project and the description of the components [here](https://circuitdigest.com/microcontroller-projects/ble-based-proximity-control-using-esp32)
