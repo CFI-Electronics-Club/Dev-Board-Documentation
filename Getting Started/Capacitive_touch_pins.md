@@ -43,6 +43,6 @@ void loop() {
 Use the touchRead() function, and pass as an argument as the pin you want to read from. In this case, the example uses T0, which is the touch sensor 0, in GPIO 4. You can either pass the touch sensor number (T0) or the GPIO number (4). We also can use the serial plotter to see the values.
 
 ## Further reading
-1. [](https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/)
-2. [](https://www.allaboutcircuits.com/technical-articles/introduction-to-capacitive-touch-sensing/)
+1. [link1](https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/)
+2. [link2](https://www.allaboutcircuits.com/technical-articles/introduction-to-capacitive-touch-sensing/)
 
