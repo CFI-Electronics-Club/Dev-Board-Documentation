@@ -2,8 +2,8 @@
 
 This tutorial shows how to send notifications to your Telegram account when the ESP32 custom development board's detects motion. As long as you have access to the internet in your smartphone, you’ll be notified no matter where you are. The board will be programmed using Arduino IDE. This is a simple project, but shows how you can use Telegram in your IoT and Home Automation projects. The idea is to apply the concepts learned in your own projects.
 
-## Instructions:
-## Prerequisites
+## Instructions
+### Prerequisites
 * Telegram App on your Device           
 * Arduino IDE
 * Download the [Universal Telegram Bot Library](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot/archive/master.zip) and add this into your Arduino IDE   
