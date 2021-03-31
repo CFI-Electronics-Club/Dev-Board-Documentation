@@ -169,3 +169,5 @@ void loop() {
   display.display(); 
 }
 ```
+## References
+[Random Nerd Tutorials](https://randomnerdtutorials.com/esp32-esp8266-dht-temperature-and-humidity-oled-display/#more-85288)
