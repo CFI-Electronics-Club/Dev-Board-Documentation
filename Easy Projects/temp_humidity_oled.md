@@ -13,7 +13,7 @@ The temperature and humidity readings will be measured by the DHT22 sensor. Thes
 *  **DHT22 Library** - Search 'DHT' in the search bar and install the Adafruit DHT Library. Also install the 'Adafruit Unified Sensor' Library.
 ## Schematic
 ![Schematic](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/Images/temphumidity.png)
-## Code
+## Code Explanation
 ### Importing Libraries
 ```
 #include <Wire.h>
