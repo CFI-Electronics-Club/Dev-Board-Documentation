@@ -8,7 +8,7 @@
  - ESP32 Board
  - OLED display
 ## Schematic
- ![](images/Insta_schematic.jpg)
+ ![esp32_oled](https://user-images.githubusercontent.com/55990571/113220065-31a12880-92a0-11eb-9ca9-936948460ad8.png)
 ## Code
 ```
 #include <Wire.h>                   // Only needed for Arduino 1.6.5 and earlier
