@@ -7,7 +7,7 @@ This is when PWM helps. PWM is a way to control analog devices with a digital ou
 An example would be to apply full voltage to a motor or lamp for fractions of a second or pulse the voltage to the motor at intervals that made the motor or lamp do what you wanted it to do. In reality, the voltage is being applied and then removed many times in an interval, but what you experience is an analog-like response.
 
 A device that is driven by PWM ends up behaving like the average of the pulses.
-![]()
+![](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/Pulse-Width-Modulation.jpg)
 ## How We Can Use It
 There are two ways to implement PWM, one way would be to implement it manually, another way would be using a builtin function. Let us see how it is implemented manually.
 ```
