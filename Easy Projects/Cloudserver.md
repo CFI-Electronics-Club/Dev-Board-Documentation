@@ -33,7 +33,7 @@ There are no external connections required. Just connecting the Dev board to the
 * SCL of custom board <-> Pin 22 of custom board
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/cloud.jpg)
 ## Code
-```
+```py
 #ifdef __cplusplus
 extern "C" {
 #endif
