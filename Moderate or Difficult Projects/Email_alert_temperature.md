@@ -1,6 +1,7 @@
 # Email Alert Based on Temperature Threshold
 ## Description
 In this project, we will send an email alert with the ESP32 based on a temperature threshold. The ESP32 also hosts a Web Server that shows the latest sensor readings and input fields to change the threshold value, email’s recipient, and the option to arm or disarm the system.
+![](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Moderate%20or%20Difficult%20Projects/Images/ESP32-Email-notification-with-temperature-threshold.png)
 ## Suggested Reading Material
 * [ESP32 Send Emails using an SMTP Server: HTML, Text and Attachments (Arduino IDE)](https://randomnerdtutorials.com/esp32-send-email-smtp-server-arduino-ide/)
 * [Input Data on HTML Form ESP32/ESP8266 Web Server using Arduino IDE](https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/)
