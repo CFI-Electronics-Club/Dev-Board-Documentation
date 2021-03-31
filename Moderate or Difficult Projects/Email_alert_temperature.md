@@ -1,4 +1,4 @@
-# ESP32 Email Alert Based on Temperature Threshold
+# Email Alert Based on Temperature Threshold
 ## Description
 In this project, we will send an email alert with the ESP32 based on a temperature threshold. The ESP32 also hosts a Web Server that shows the latest sensor readings and input fields to change the threshold value, email’s recipient, and the option to arm or disarm the system.
 ## Suggested Reading Material
