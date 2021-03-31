@@ -11,6 +11,8 @@ The temperature and humidity readings will be measured by the DHT22 sensor. Thes
 ## Required Libraries
 * **OLED Display Libraries** - Adafruit SSD1306 library is a commonly used library to interface the dev board to the OLED display conveniently. To install this type 'SSD1306' in the search bar of Manage Libraries. Install the Adafruit version of it. You also need to install the GFX library for graphics. Just search 'GFX' in the search bar and install it.
 *  **DHT22 Library** - Search 'DHT' in the search bar and install the Adafruit DHT Library. Also install the 'Adafruit Unified Sensor' Library.
+## Schematic
+![Schematic](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/Images/temphumidity.png)
 ## Code
 ### Importing Libraries
 ```
