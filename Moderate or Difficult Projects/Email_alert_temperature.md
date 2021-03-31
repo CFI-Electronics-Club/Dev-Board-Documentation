@@ -15,7 +15,7 @@ In this project, we will send an email alert with the ESP32 based on a temperatu
 * Wires
 * Breadboard
 ## Schematic
-![]()
+![](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Moderate%20or%20Difficult%20Projects/Images/email_alert.png)
 ## Code
 ```
 #include <WiFi.h>
