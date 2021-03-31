@@ -25,6 +25,8 @@
 
 ### Schematic:
 
+![image](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/Images/ESP32game.jpg)
+
 ### Code:
 ```
 #include <BleKeyboard.h>
