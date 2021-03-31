@@ -19,7 +19,7 @@
 * Breadboard
 * Jumper Wires
 ## Schematic
-...
+![image](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/Images/DualCoreProcessing.png)
 ## Code
 ```
 // The below code blinks 2 LED on different cores (Parallel blinking at different blinking rates)
