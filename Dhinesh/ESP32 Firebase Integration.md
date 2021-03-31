@@ -17,8 +17,9 @@ Yes, it’s free. You can use Analytics for advanced messaging – out of the bo
 
 ## Instructions:
 
-Setup Google Firebase Account Setup for the ESP32. Before you start the programming, first of all make sure that you download all the necessary [library](https://www.electroniclinic.com/wp-content/uploads/2019/08/FirebaseArduino.zip). Connect the Potentiometer with the Analog pin A0 of the Electronics Club ESP32 custom development board. More details can be found [here](https://www.electroniclinic.com/esp32-firebase-tutorial-send-sensor-data-to-google-firebase-database/)
-
+- Follow instructions from this [link](https://www.electroniclinic.com/esp32-firebase-tutorial-send-sensor-data-to-google-firebase-database/) to setup Google Firebase Account Setup for the ESP32. 
+- Before you start the programming, first of all make sure that you download all the necessary [libraries](https://www.electroniclinic.com/wp-content/uploads/2019/08/FirebaseArduino.zip). 
+- Connect the Potentiometer with the Analog pin A0 of the Electronics Club ESP32 custom development board.
 ## Code:
 
 ```
@@ -96,8 +97,8 @@ delay(100);
 
 ## Links:
 
-This tutorial is extracted from [here](https://www.electroniclinic.com/esp32-firebase-tutorial-send-sensor-data-to-google-firebase-database/). For more detailed explanation, you can refer to this link.
+- This tutorial is extracted from [here](https://www.electroniclinic.com/esp32-firebase-tutorial-send-sensor-data-to-google-firebase-database/). For more detailed explanation, you can refer to this link.
 
-[Firebase Library](https://www.electroniclinic.com/wp-content/uploads/2019/08/FirebaseArduino.zip)
+- [Firebase Library](https://www.electroniclinic.com/wp-content/uploads/2019/08/FirebaseArduino.zip)
 
-[Google Firebase Documentation](https://firebase.google.com/docs)
+- [Google Firebase Documentation](https://firebase.google.com/docs)
