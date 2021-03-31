@@ -6,7 +6,7 @@ The concept is really simple. The temperature and hall effect sensor values are 
 ## Components required
 * Electronics club custom development board 
 * Jumper wires
-## Libraries required:
+## Libraries required
 * WiFi.h
 * ThingSpeak.h
 * secrets.h
@@ -33,6 +33,90 @@ There are no external connections required. Just connecting the Dev board to the
 * SCL of custom board <-> Pin 22 of custom board
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/cloud.jpg)
 ## Code
+### Libraries are included
+```ino
+#ifdef __cplusplus
+extern "C" {
+#endif
+uint8_t temprature_sens_read();
+#ifdef __cplusplus
+}
+#endif
+uint8_t temprature_sens_read();
+
+#include <WiFi.h>
+#include "secrets.h"
+#include "ThingSpeak.h" // always include thingspeak header file after other header files and custom macros
+```
+### Netwrok details are accessed
+```ino
+char ssid[] = SECRET_SSID;   
+char pass[] = SECRET_PASS;   
+WiFiClient  client;
+
+unsigned long myChannelNumber = SECRET_CH_ID;
+const char * myWriteAPIKey = SECRET_WRITE_APIKEY;
+```
+### Useful variables are declared
+```ino
+int h = hallRead();
+float t = ((temprature_sens_read()-32)/1.8);                //changing temperature parameter to celsius
+String myStatus = "";
+```
+### Network connection is set up
+```ino
+void setup() {
+  Serial.begin(115200);  //Initialize serial
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for Leonardo native USB port only
+  }
+  
+  WiFi.mode(WIFI_STA);   
+  ThingSpeak.begin(client);  // Initialize ThingSpeak
+}
+```
+### Values are sent to cloud and updated
+```ino
+void loop() {
+
+  // Connect or reconnect to WiFi
+  if(WiFi.status() != WL_CONNECTED){
+    Serial.print("Attempting to connect to SSID: ");
+    Serial.println(SECRET_SSID);
+    while(WiFi.status() != WL_CONNECTED){
+      WiFi.begin(ssid, pass);  // Connect to WPA/WPA2 network. Change this line if using open or WEP network
+      Serial.print(".");
+      delay(5000);     
+    } 
+    Serial.println("\nConnected.");
+  }
+
+  // set the fields with the values
+  ThingSpeak.setField(1, h);
+  ThingSpeak.setField(2, t);              //Field values are stored
+
+ 
+  //set the status
+  myStatus = String("Values are updated");
+  ThingSpeak.setStatus(myStatus);              //Status is written
+  
+  // write to the ThingSpeak channel
+  int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);            //Values are sent to cloud server
+  if(x == 200){
+    Serial.println("Channel update successful.");
+    Serial.println(String("Hall: ")+h+String(" Temperature: ")+t);
+  }
+  else{
+    Serial.println("Problem updating channel. HTTP error code " + String(x));
+  }
+
+   h = hallRead();
+   t = ((temprature_sens_read()-32)/1.8);                           //Input values are read at next time instant
+  delay(20000); // Wait 20 seconds to update the channel again
+}
+```
+
+## Full code
 ```ino
 #ifdef __cplusplus
 extern "C" {
@@ -47,8 +131,8 @@ uint8_t temprature_sens_read();
 #include "secrets.h"
 #include "ThingSpeak.h" // always include thingspeak header file after other header files and custom macros
 
-char ssid[] = SECRET_SSID;   // your network SSID (name) 
-char pass[] = SECRET_PASS;   // your network password
+char ssid[] = SECRET_SSID;   
+char pass[] = SECRET_PASS;   
 WiFiClient  client;
 
 unsigned long myChannelNumber = SECRET_CH_ID;
@@ -84,14 +168,15 @@ void loop() {
 
   // set the fields with the values
   ThingSpeak.setField(1, h);
-  ThingSpeak.setField(2, t);
+  ThingSpeak.setField(2, t);              //Field values are stored
+
  
   //set the status
   myStatus = String("Values are updated");
-  ThingSpeak.setStatus(myStatus);
+  ThingSpeak.setStatus(myStatus);              //Status is written
   
   // write to the ThingSpeak channel
-  int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
+  int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);            //Values are sent to cloud server
   if(x == 200){
     Serial.println("Channel update successful.");
     Serial.println(String("Hall: ")+h+String(" Temperature: ")+t);
@@ -101,7 +186,7 @@ void loop() {
   }
 
    h = hallRead();
-   t = ((temprature_sens_read()-32)/1.8);
+   t = ((temprature_sens_read()-32)/1.8);                           //Input values are read at next time instant
   delay(20000); // Wait 20 seconds to update the channel again
 }
 ```
