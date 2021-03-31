@@ -7,7 +7,7 @@ The concept is really simple. The temperature and hall effect sensor values are 
 * Electronics club custom development board 
 * Jumper wires
 ## Schematic
-The following connections should be made:
+There are no external connections required. Just connecting the Dev board to the laptop using the USB cable is enough. However, following connections should be made if you also want to obtain the MPU6050 IMU values:
 
 * SDA of custom board <-> Pin 21 of custom board
 * SCL of custom board <-> Pin 22 of custom board
