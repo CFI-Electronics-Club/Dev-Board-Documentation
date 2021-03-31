@@ -82,7 +82,7 @@ https://user-images.githubusercontent.com/55990571/113218770-b9d1fe80-929d-11eb-
 ```
 #include <BleKeyboard.h>
 //Se the name of the bluetooth keyboard (that shows up in the bluetooth menu of your device)
-BleKeyboard bleKeyboard("Arcade Phone");
+BleKeyboard bleKeyboard("ESP_KEYBOARD");
 
 const int buttonPin = 13;
 //Set the old button state to be LOW/false; which means not pressed
