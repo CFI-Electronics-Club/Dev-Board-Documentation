@@ -35,6 +35,11 @@ A more general formula is given below:
 
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/pullupval.jpg)
 
+where:
+* Vcc = Source voltage
+* VIH(Min) = Minimum acceptable voltage for logic HIGH
+* IIH = Maximum current through the pull up resistor when switch is open
+
 Hence, R_up can have a max, of 2k ohm resistance but not more than that. Inface, it is advised to have a R_up below this max. value as that provides room for small error and noises in the voltage. However, having very low R_up can lead to huge currents leading to power losses and Joule's heating. Hence, optimum value must be chosen depending on the application. 
 
 ### Pull up resistor value connecting multiple inputs:
