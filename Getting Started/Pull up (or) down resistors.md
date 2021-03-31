@@ -24,7 +24,7 @@ This image shows the valid logic levels and also the voltages which are neither 
 
 ## Finding the resistor values:
 
-### Pull up resistor calculation:
+### Pull up resistor value calculation:
 Let's say that Vcc is 5V and the range of voltages that belong to the logic HIGH class is 3.0V to 5.0V. Also, let's say that the maximum current that flows from Vcc into the digital circuitry when the switch is left opened is 1.0 mA. There is no problem when the switch is closed as in that case, the input is proper logic LOW (0V). However, when the switch is open, the input wire is pulled up to Vcc using a resistor. Let its resistance be **R_up** (in ohm). Clearly, the maximum drop across it could be R_up mV
 (1 ma x R_up ohms). This drop is also equal to:
                                              Vcc - V_input
@@ -43,3 +43,25 @@ where:
 Hence, R_up can have a max, of 2k ohm resistance but not more than that. Inface, it is advised to have a R_up below this max. value as that provides room for small error and noises in the voltage. However, having very low R_up can lead to huge currents leading to power losses and Joule's heating. Hence, optimum value must be chosen depending on the application. 
 
 ### Pull up resistor value connecting multiple inputs:
+Let's assume a single pull up resistor is pulling up multiple inputs to Vcc. In that case, the resistance must be changed because now the total current through the resistor will be high. Say it is connected to 5 inputs and the max. current through all the inputs are 20mA. Clearly, the max. current through the resistor will be 5x20mA = 100mA. Hence, the new R_up value will be given by this formula:
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/pullupvalfan.jpg)
+
+This particular method of pulling up multiple inputs is called **Fan-in** of inputs. If the resistor pulls up 10 inputs then the fan-in ratio is 10.
+
+### Pull down resistor value calculation:
+The concept is exactly same as that of the pull up resistor value calculation. The only changes are that now instead of having a minimum value for V_input, we will have a maximum value for it uptill which it can be deemed as a logic LOW. So, let's say the max. current in switch open state is IIL, the max. voltage is VIL(Max). Hence, the formula will be:
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/pulldownval.jpg)
+
+Again, the value of resistance we obtained is the maximum limit. It is advised to use a resistor with lower resistance for error tolerance. However, it can't be lowered as much as we want because that would lead to high currents. Hence, again we need to find the optimum value. 
+
+### Pull down resistor value connecting multiple inputs:
+The concept is exactly same as that of a pull up resistor connecting multiple inputs. You just need to find the max. value for R in a single-input case and divide that value by the fan-in ratio to obtain the new maximum limit.
+
+## Open-collector outputs and pull up resistor value calculation:
+Sometimes, we may also need an output which is left open, i.e., it can either be logic LOW or must be left open so that the user can manually pull it up to a desired voltage level. Such circuits help in providing different levels for the outptu terminal. For example, depending on the ratings of the load, the user may pull it up to a DC 5V source or a DC 25V source. The circuitry just acts as a control system and doesn't actually set the output HIGH. Such outputs are called as **Open-collector** outputs because usually they are the collector terminals of the transistors present within the internal circuitry. The diagram is given below:
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/opencol.jpg)
+
+Now that we know that such a circuit exists, we must find the pull up resistance. To do that first let's analyse the circuit.
