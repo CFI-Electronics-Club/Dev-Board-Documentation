@@ -63,9 +63,11 @@ The concept is exactly same as that of a pull up resistor connecting multiple in
 Sometimes, we may also need an output which is left open, i.e., it can either be logic LOW or must be left open so that the user can manually pull it up to a desired voltage level. Such circuits help in providing different voltage levels for the output terminal. For example, depending on the ratings of the load, the user may pull it up to a DC 5V source or a DC 25V source. The circuitry just acts as a control system and doesn't actually set the output HIGH. Such outputs are called as **Open-collector** outputs because usually they are the collector terminals of the transistors present within the internal circuitry. The diagrams are given below:
 
 OFF case(Open circuit):
+
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/opencoloff.jpg)
 
 ON case(Closed circuit):
+
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/opencolon.jpg)
 
 Now, let's find the limits for the Pull up resistance:
