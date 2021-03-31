@@ -6,6 +6,26 @@ The concept is really simple. The temperature and hall effect sensor values are 
 ## Components required
 * Electronics club custom development board 
 * Jumper wires
+## Libraries required:
+* WiFi.h
+* ThingSpeak.h
+* secrets.h
+
+WiFi.h is a standard Arduino library header file. However, ThingSpeak.h is different and it needs to be installed first. Follow the steps given below:
+
+1. Open you Arduino IDE and choose Sketch/Include Library/Manage Libraries. Click the ThingSpeak Library (by MathWorks) from the list, and click the Install button.
+2. Create a .ino file which you are going to use for this code. The sketch folder will be automatically generated and the .ino file will be present in it.
+3. Create secrets.h and store it in the sketch folder. Also, write the following code into it:
+```
+// Use this file to store all of the private credentials 
+// and connection details
+
+#define SECRET_SSID "Temp"		// replace Temp with your WiFi network name
+#define SECRET_PASS "Temp"	// replace Temp with your WiFi password
+
+#define SECRET_CH_ID Temp			// replace Temp with your channel number
+#define SECRET_WRITE_APIKEY "Temp"   // replace Temp with your channel write API Key
+```
 ## Schematic
 There are no external connections required. Just connecting the Dev board to the laptop using the USB cable is enough. However, following connections should be made if you also want to obtain the MPU6050 IMU values:
 
@@ -88,5 +108,5 @@ void loop() {
 ## Follow up Problem Statement
 As a follow up problem statement, try controlling certain outputs based on the data you obtain. For example, if the temperature graph you plot is having standard deviation below a certain threshold, you should switch on an LED. Else, no need of the LED. You can think of your own problem statements and try using the cloud server to your advantage. Make the required changes to the code so that you can also obtain the IMU sensor values. Try using the Adafruit_MPU6050 library to obtain the filtered data (Taught in the IMU web server session).  
 ## References
-[Data to cloud from ESP32](https://iotdesignpro.com/projects/how-to-send-data-to-thingspeak-cloud-using-esp32)
-
+[Tutorial: Data to cloud from ESP32](https://iotdesignpro.com/projects/how-to-send-data-to-thingspeak-cloud-using-esp32)
+[ThingSpeak library documentation example](https://github.com/mathworks/thingspeak-arduino/blob/master/examples/ESP32/WriteMultipleFields/WriteMultipleFields.ino)
