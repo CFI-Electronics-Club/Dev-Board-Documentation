@@ -60,8 +60,41 @@ Again, the value of resistance we obtained is the maximum limit. It is advised t
 The concept is exactly same as that of a pull up resistor connecting multiple inputs. You just need to find the max. value for R in a single-input case and divide that value by the fan-in ratio to obtain the new maximum limit.
 
 ## Open-collector outputs and pull up resistor value calculation:
-Sometimes, we may also need an output which is left open, i.e., it can either be logic LOW or must be left open so that the user can manually pull it up to a desired voltage level. Such circuits help in providing different levels for the outptu terminal. For example, depending on the ratings of the load, the user may pull it up to a DC 5V source or a DC 25V source. The circuitry just acts as a control system and doesn't actually set the output HIGH. Such outputs are called as **Open-collector** outputs because usually they are the collector terminals of the transistors present within the internal circuitry. The diagram is given below:
+Sometimes, we may also need an output which is left open, i.e., it can either be logic LOW or must be left open so that the user can manually pull it up to a desired voltage level. Such circuits help in providing different voltage levels for the output terminal. For example, depending on the ratings of the load, the user may pull it up to a DC 5V source or a DC 25V source. The circuitry just acts as a control system and doesn't actually set the output HIGH. Such outputs are called as **Open-collector** outputs because usually they are the collector terminals of the transistors present within the internal circuitry. The diagrams are given below:
 
-![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/opencol.jpg)
+OFF case(Open circuit):
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/opencoloff.jpg)
 
-Now that we know that such a circuit exists, we must find the pull up resistance. To do that first let's analyse the circuit.
+ON case(Closed circuit):
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/opencolon.jpg)
+
+Now, let's find the limits for the Pull up resistance:
+
+**1. Maximum value:**
+The max. value of the resistance is obtained in the OFF case. In this O case, theoretically, the transistor behaves like an open circuit. However, it'll still have some leakage current. The max. value of this leakage current will be given in the datasheet. Similarly, the max. value of the current throught the load will also be given in the datasheet. Hence, we can find the max. value of the pull up resistor current in OFF case. Now, the max. drop across the resistor would be this max. current times the resistance. This drop should be in such a way that the output terminal is having a voltage which is deemed as logic HIGH. Hence, the formula for R_up(Max.) is:
+
+                                           R_up(Max.) = (Vcc-VIH)/(I_pullup_OFF)
+where:
+* Vcc = Source voltage                     
+* VIH(Min) = Minimum acceptable voltage for logic HIGH
+* I_pullup_OFF = Maximum current through the pull up resistor when in OFF case
+                                              
+This limit is a maximum for the resistance as any other resistance higher than this value will increase the drop and can make the output voltage value go below the VIH(Min.) value.
+
+**2. Minimum value:**
+The min. value of the resistance is obtained in the ON case. In this ON case, theoretically, the transistor behaves like a short circuit and hence, the output terminal is perfectly grounded. However, in reality, the transistor will have some resistance and hence, V_output will not be Gnd. Let the current through the transistor be I_L. The ratings for currents through the transistor and the load will be specified in the datasheet and hence, we can find the I_pullup_ON value based on those ratings. The formula for R_up(Min.) is:                            
+
+                                           R_up(Min.) = (Vcc-VIL)/(I_pullup_ON)
+where:
+* Vcc = Source voltage                     
+* VIL(Max) = Maximum acceptable voltage for logic LOW
+* I_pullup_ON = Maximum current through the pull up resistor when in ON case        
+
+This limit is a minimum for the resistance as any other resistance lower than this value will increase the I_L current leading to an output voltage more than the acceptable level for logic LOW.
+
+## References:
+
+* ![Pull Up/Down resistors explained](https://www.electronics-tutorials.ws/logic/pull-up-resistor.html)
+* ![Choosing an appropriate Pull Up/Down resistor](https://www.ti.com/lit/an/slva485/slva485.pdf?ts=1617170839444&ref_url=https%253A%252F%252Fwww.google.com%252F)
+                                 
+                                         
