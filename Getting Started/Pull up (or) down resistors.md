@@ -7,7 +7,7 @@ Also, sometimes we need an input to be present in it's default state and only ne
 
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/logic1.jpg)
 
-However, there are some problems. The problem with the first circuit is that when the switch is open, the input wire is neither HIGH or LOW. Instead it is **Floating** between Vcc and Gnd. The problem with the second circuit is that when the input we want is logic LOW, the switch should be closed. This leads to shorting of the battery which can cause a lot of issues from damaging the circuitry to energy losses. Hence, we need a different circuit to resolve these issues and that's where the concept of Pull Up/Down resistors was introduced.
+However, there are some problems. The problem with the first circuit is that when the switch is open, the input wire is neither HIGH nor LOW. Instead it is **Floating** between Vcc and Gnd. The problem with the second circuit is that when the input we want is logic LOW, the switch should be closed. This leads to shorting of the battery which can cause a lot of issues from damaging the circuitry to energy losses. Hence, we need a different circuit to resolve these issues and that's where the concept of Pull Up/Down resistors was introduced.
 
 ## Concept behind Pull Up/Down resistors:
 
