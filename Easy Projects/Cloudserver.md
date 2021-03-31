@@ -48,7 +48,7 @@ uint8_t temprature_sens_read();
 #include "secrets.h"
 #include "ThingSpeak.h" // always include thingspeak header file after other header files and custom macros
 ```
-### Netwrok details are accessed
+### Network details are accessed
 ```ino
 char ssid[] = SECRET_SSID;   
 char pass[] = SECRET_PASS;   
