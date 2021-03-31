@@ -95,8 +95,8 @@ where:
 This limit is a minimum for the resistance as any other resistance lower than this value will increase the I_L current leading to an output voltage more than the acceptable level for logic LOW.
 
 ## References:
-
-* ![Pull Up/Down resistors explained](https://www.electronics-tutorials.ws/logic/pull-up-resistor.html)
-* ![Choosing an appropriate Pull Up/Down resistor](https://www.ti.com/lit/an/slva485/slva485.pdf?ts=1617170839444&ref_url=https%253A%252F%252Fwww.google.com%252F)
+Refer these links for detailed explanation:
+* [Pull Up/Down resistors explained](https://www.electronics-tutorials.ws/logic/pull-up-resistor.html)
+* [Choosing an appropriate Pull Up/Down resistor](https://www.ti.com/lit/an/slva485/slva485.pdf?ts=1617170839444&ref_url=https%253A%252F%252Fwww.google.com%252F)
                                  
                                          
