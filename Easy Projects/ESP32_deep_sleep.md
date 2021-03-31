@@ -22,8 +22,7 @@ Buzzer Pin 2 --> GND
 LDR Leg 1 --> 10k Resistor --> 5 of CDB              
 LDR Leg 1 --> VCC           
 LDR Leg 2 --> GND               
-###### (Note: Leg 1 and Leg 2 are named arbitrarily)
-![](Images/Theremin.png)
+
 ## Code
 ```c
 #define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
@@ -31,28 +30,28 @@ LDR Leg 2 --> GND
 
 RTC_DATA_ATTR int bootCount = 0;
 
-int GREEN_LED_PIN = 25;
-int YELLOW_LED_PIN = 26;
+int LED_PIN_1 = 25;
+int LED_PIN_2 = 26;
 
 void setup(){
 
-  pinMode(GREEN_LED_PIN,OUTPUT);
-  pinMode(YELLOW_LED_PIN,OUTPUT);
+  pinMode(LED_PIN_1,OUTPUT);
+  pinMode(LED_PIN_2,OUTPUT);
   delay(500);
   
   if(bootCount == 0) //Run this only the first time
   {
-      digitalWrite(YELLOW_LED_PIN,HIGH);
+      digitalWrite(LED_PIN_2,HIGH);
       bootCount = bootCount+1;
   }else
   {
-      digitalWrite(GREEN_LED_PIN,HIGH);
+      digitalWrite(LED_PIN_1,HIGH);
   }
   
   delay(3000);
 
-  digitalWrite(GREEN_LED_PIN,LOW);
-  digitalWrite(YELLOW_LED_PIN,LOW);
+  digitalWrite(LED_PIN_1,LOW);
+  digitalWrite(LED_PIN_2,LOW);
 
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
   esp_deep_sleep_start();
