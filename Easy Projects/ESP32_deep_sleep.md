@@ -17,12 +17,10 @@ Arduino IDE
 * Breadboard   
 * Multimeter
 ## Schematic
-Buzzer Pin 1 --> 4 of CDB             
-Buzzer Pin 2 --> GND                    
-LDR Leg 1 --> 10k Resistor --> 5 of CDB              
-LDR Leg 1 --> VCC           
-LDR Leg 2 --> GND               
+
+
 ![image](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/Images/deep_sleep.jpg)
+
 ## Code
 ```c
 #define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
