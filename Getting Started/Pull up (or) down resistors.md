@@ -15,4 +15,11 @@ However, there are some problems. The problem with the first circuit is that whe
 
 When a pull Up/Down resistor is used, the input terminal is automatically maintained at a valid default state. When the default state is logic HIGH, the resistor connects the input to Vcc and hence, known as **Pull Up** Resistor. If the default state is logic LOW, then the resistor connects input to Gnd and hence, known as **Pull down** resistor. They ensure that the input terminal is never floating and also won't allow shorting of the source. Now, that we understood the concept of Pull Up/Down resistors, the next step is to find what are their values. But before doing that, first we must understand the range of voltage for different digital states. 
 
-## 
+## Logic levels
+We know that inputs are nothing but electric voltages and hence they are continuous variables, i.e., they range over a continuum of real values (say from 0 to 5V). But we are trying to assign only two discrete valid states. Hence, there must be some mapping between the real voltage values and the discrete logic values. We can say that logic LOW is 0V (Gnd) and logic HIGH is Vcc (Usually 5V). However, practical systems need not have only either of these two voltages and can also have intermediate values like 4.3V or 1.7V. Hence, we need a range of values to be deemed as logic LOW and another range of values to be deemed as logic HIGH. The picture below illustrates one particular example of TTL 74LSxxx series of digital logic gates:
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/logiclevels.jpg)
+
+This image shows the valid logic levels and also the voltages which are neither LOW nor HIGH. In case of a floating wire, such voltages can occur causing a problem in the system. Once, the logic levels are known, we can find the Pull Up/Down resistor values using some quick math and understanding.
+
+## Finding the resistor values:
