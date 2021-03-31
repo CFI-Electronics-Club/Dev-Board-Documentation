@@ -18,3 +18,9 @@ i) English alpha consists of 26 letter, there is no letter between A
 and B. <br />
 ii) Square waves are Digital.
 
+![image](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/analogvdigital.png)
+
+![image](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Getting%20Started/Images/analogvdigital2.jpg)
+
+### References
+* [Analog v/s Digital](https://learn.sparkfun.com/tutorials/analog-vs-digital/all)
