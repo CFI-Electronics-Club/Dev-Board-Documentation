@@ -16,7 +16,7 @@ WiFi.h is a standard Arduino library header file. However, ThingSpeak.h is diffe
 1. Open you Arduino IDE and choose Sketch/Include Library/Manage Libraries. Click the ThingSpeak Library (by MathWorks) from the list, and click the Install button.
 2. Create a .ino file which you are going to use for this code. The sketch folder will be automatically generated and the .ino file will be present in it.
 3. Create secrets.h and store it in the sketch folder. Also, write the following code into it:
-```
+```c
 // Use this file to store all of the private credentials 
 // and connection details
 
@@ -33,7 +33,7 @@ There are no external connections required. Just connecting the Dev board to the
 * SCL of custom board <-> Pin 22 of custom board
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/cloud.jpg)
 ## Code
-```py
+```c
 #ifdef __cplusplus
 extern "C" {
 #endif
