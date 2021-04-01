@@ -73,6 +73,8 @@ void loop() {
 
 https://user-images.githubusercontent.com/55990571/113218770-b9d1fe80-929d-11eb-8ad7-c6e9cb6ac754.mp4
 
+![BLE_KEYBOARD_gif](https://user-images.githubusercontent.com/55990571/113268477-0a287b00-92f5-11eb-830b-f7b92f53a6fa.gif)
+
 
 ***Play/Pause button***
 - Upload the below code
