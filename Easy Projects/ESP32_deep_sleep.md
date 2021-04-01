@@ -63,6 +63,6 @@ void loop(){
 When we use the deep-sleep function, each time the ESP32 wakes up, it executes the setup function again. The loop function is never called. All the variable values are lost, except if we save them in the RTC memory using this prefix.
 
 ## Follow-up Problem Statement
-Measure the current that the board takes when it is used in active mode and deep sleep mode. 
+Measure the current that the board takes when it is used in active mode and deep sleep mode using a multimeter. Also, we see that after a random number of wakes up, the board goes to sleep and it won't wake up again. How do we solve this bug?
 ## References
 [ESP32 deep sleep tutorial](https://www.instructables.com/ESP32-Deep-Sleep-Tutorial/)
