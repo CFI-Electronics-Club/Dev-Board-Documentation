@@ -63,6 +63,6 @@ void loop(){
 When we use the deep-sleep function, each time the ESP32 wakes up, it executes the setup function again. The loop function is never called. All the variable values are lost, except if we save them in the RTC memory using this prefix.
 
 ## Follow-up Problem Statement
-Can you use the capacitive touch pins and Aluminium foil to change the frequency of the buzzer as you slide your finger over the foil??
+Measure the current that the board takes when it is used in active mode and deep sleep mode. 
 ## References
 [ESP32 deep sleep tutorial](https://www.instructables.com/ESP32-Deep-Sleep-Tutorial/)
