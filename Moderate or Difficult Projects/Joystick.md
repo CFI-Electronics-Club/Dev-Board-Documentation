@@ -121,7 +121,7 @@ The code provides keystrokes to the computer. Hence, if not controlled properly,
 
 1. I used the in-built pushbutton of the HW-504 as the control signal. 
 ```ino
-/*
+  /*
   int trig = analogRead(35);
    
   if(trig==0){
@@ -129,7 +129,7 @@ The code provides keystrokes to the computer. Hence, if not controlled properly,
   }
   */
 ```
-This commented code snippet pertains to it. Uncomment this snippet in the main code to use the inbuilt pushbutton as the control signal. Also, initialise the variable state will boolean value "**false**" (Remove the ! symbol from line 4 of the main code)
+This commented code snippet pertains to it. Uncomment this snippet in the main code to use the inbuilt pushbutton as the control signal. Also, initialise the variable state with boolean value "**false**" (Remove the ! symbol from line 4 of the main code)
 
 2. Sometimes, the inbuilt pushbutton may behave weirdly because of the associated X,Y movements. Hence, it's better to use an external pushbutton as the control signal. The only change you'll need to make to the schematic is to remove the **SW <-> Pin 35** connection and provide the external pushbutton input to pin 35. The schematic is given below:
 
@@ -143,3 +143,7 @@ As a follow up problem statement, learn how you can send the keystrokes through 
 ## References
 1. [How a 2-axis jouystick works](https://lastminuteengineers.com/joystick-interfacing-arduino-processing/#:~:text=The%20goal%20of%20the%20joystick,in%20a%20control%20stick%20form.)
 2. [ESP32_BLE_Keyboard by Kanishkan](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/ESP32_Bluetooth_Keyboard.md)
+
+Demonstration video:
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/JoystickVideo.mp4)
