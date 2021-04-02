@@ -146,4 +146,4 @@ As a follow up problem statement, learn how you can send the keystrokes through 
 
 Demonstration video:
 
-![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/JoystickVideo.mp4)
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Moderate%20or%20Difficult%20Projects/Images/JoystickVideo.gif)
