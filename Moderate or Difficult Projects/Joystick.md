@@ -39,8 +39,13 @@ The values given in the second image need not be the same for everyone. For exam
 ```ino
 #include <BleKeyboard.h>
 
-BleKeyboard Key("Temp");  //Replace Temp with the name you want to provide for the bluetooth of the board. That name will appear in the devices list when you switch on the
-                          //laptop's bluetooth. Also, the board must be paired for sending the keystrokes.
+BleKeyboard Key("Temp");  
+/*
+Replace Temp with the name you want to provide for the bluetooth of the board. 
+That name will appear in the devices list when you switch on the
+laptop's bluetooth. Also, the board must be paired for sending the keystrokes.
+*/
+
 boolean state = !false;                  
 
 void setup() {
@@ -129,7 +134,7 @@ The code provides keystrokes to the computer. Hence, if not controlled properly,
   }
   */
 ```
-This commented code snippet pertains to it. Uncomment this snippet in the main code to use the inbuilt pushbutton as the control signal. Also, initialise the variable state with boolean value "**false**" (Remove the ! symbol from line 4 of the main code)
+This commented code snippet pertains to it. Uncomment this snippet in the main code to use the inbuilt pushbutton as the control signal. Also, initialise the variable state with boolean value "**false**" (Remove the ! symbol in the line that declares the variable 'State')
 
 2. Sometimes, the inbuilt pushbutton may behave weirdly because of the associated X,Y movements. Hence, it's better to use an external pushbutton as the control signal. The only change you'll need to make to the schematic is to remove the **SW <-> Pin 35** connection and provide the external pushbutton input to pin 35. The schematic is given below:
 
@@ -141,8 +146,9 @@ This commented code snippet pertains to it. Uncomment this snippet in the main c
 ## Follow up Problem statement
 As a follow up problem statement, learn how you can send the keystrokes through the USB instead of bluetooth using the BLE library. Note that for this to be done, the circuit must be powered using your laptop. Also, learn how you can do the same using IMU instead of the joystick module. The values obtained from IMU maybe noisy and hence, the WASD control may not be exactly matched but still it's a good learning outcome.
 ## References
-1. [How a 2-axis jouystick works](https://lastminuteengineers.com/joystick-interfacing-arduino-processing/#:~:text=The%20goal%20of%20the%20joystick,in%20a%20control%20stick%20form.)
+1. [How a 2-axis joystick works](https://lastminuteengineers.com/joystick-interfacing-arduino-processing/#:~:text=The%20goal%20of%20the%20joystick,in%20a%20control%20stick%20form.)
 2. [ESP32_BLE_Keyboard by Kanishkan](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/ESP32_Bluetooth_Keyboard.md)
+3. [ESP32 Tutorial: Joystick](https://www.youtube.com/watch?v=gudmACeUyVc)
 
 Demonstration video:
 
