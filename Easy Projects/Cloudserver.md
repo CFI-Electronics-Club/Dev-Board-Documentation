@@ -31,7 +31,7 @@ There are no external connections required. Just connecting the Dev board to the
 
 * SDA of custom board <-> Pin 21 of custom board
 * SCL of custom board <-> Pin 22 of custom board
-![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Ruban/images/cloud.jpg)
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Easy%20Projects/Images/cloud.jpg)
 ## Code
 ### Libraries are included
 ```ino
