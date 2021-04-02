@@ -26,4 +26,10 @@ Make the following connections:
 
 ![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Moderate%20or%20Difficult%20Projects/Images/joystick.jpg)
 ## Working of the joystick
-The analog joystick basically works based on the **Gimbal** mechanism. 
+The analog joystick basically works based on the **Gimbal** mechanism. Beneath the stick, there is a rod which is placed on two U-shaped arch like structures. These U-shaped structures are actually 10K potentiometers and when the stick is moved, the rod also moves which generates an electric signal. This signal value depends on the degree to which the stick is moved. The following images will give an idea: 
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Moderate%20or%20Difficult%20Projects/Images/Gimbal.gif)
+
+![temp](https://github.com/CFI-Electronics-Club/Dev-Board-Documentation/blob/main/Moderate%20or%20Difficult%20Projects/Images/XYvalues.jpg)
+
+The values given in the second image need not be the same for everyone. For example, in my case, the values range from 0 to 4095 because the Dev board has its ADC bit resolution as 12 bits. Also, the X-value became zero when the analog stick was moved left and Y-value became zero when the stick was moved up. Basically the values given in the image are flipped with respect to the X=Y line in my case and 1024 is scaled upto 4096. So, one hint is when you do this project on your own, first check what the X, Y values are by reading the VRx, VRy values and printing them on the serial monitor. Once, you get to know which position correspond to which range of values, you can accordingly code to provide the correct strokes. Also, decide the X, Y axes before writing the code (I took the X-axis as the horizontal axis and Y-axis as the vertical aixs with respect to the second image) 
